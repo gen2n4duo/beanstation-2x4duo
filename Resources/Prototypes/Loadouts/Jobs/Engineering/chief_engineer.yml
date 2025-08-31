@@ -76,14 +76,6 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # For mantles
-- type: loadoutEffectGroup
-  id: MasterCE
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobChiefEngineer
-      time: 72000 #20 hrs
 
 # Jumpsuit
 - type: loadout
@@ -138,9 +130,6 @@
   id: ChiefEngineerMantle
   equipment:
     neck: ClothingNeckMantleCE
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCE
 
 - type: startingGear
   id: ChiefEngineerMantle

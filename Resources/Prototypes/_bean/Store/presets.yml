@@ -1,0 +1,22 @@
+- type: entity
+  id: StorePresetOutlaw
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-outlaw
+    categories:
+    - OutlawWeapons
+    - OutlawExplosives
+    - OutlawDisruption
+    - OutlawChemicals
+    - OutlawSupport
+    - OutlawResources
+    - OutlawWearables
+    - OutlawConversion
+    - OutlawPointless
+    currencyWhitelist:
+    - Telecrystal
+    - Spesos
+    balance:
+      Telecrystal: 0
+      Spesos: 0

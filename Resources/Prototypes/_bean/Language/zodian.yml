@@ -1,0 +1,110 @@
+# language of winter era in lore
+- type: language
+  id: Zodian
+  isVisibleLanguage: true
+  speech:
+    color: "#6fc2de"
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    - ari
+    - es
+    - tau
+    - ru
+    - gem
+    - ini
+    - le
+    - o
+    - vir
+    - go
+    - sco
+    - rp
+    - io
+    - sa
+    - ggi
+    - tar
+    - ius
+    - ca
+    - pr
+    - ico
+    - rn
+    - aq
+    - uar
+    - pi
+    - sce
+    - s
+    - fi
+    - xe
+    - d
+    - ca
+    - rdi
+    - nal
+    - mut
+    - ab
+    - le
+    - su
+    - me
+    - rc
+    - ury
+    - ven
+    - us
+    - mar
+    - jup
+    - it
+    - er
+    - sat
+    - ur
+    - n
+    - ura
+    - nu
+    - nep
+    - t
+    - une
+    - plu
+    - o
+    - lu
+    - na
+- type: trait
+  id: Zodian
+  name: trait-language-zodian-name
+  description: trait-language-zodian-desc
+  category: LanguageTraits
+  cost: 1
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - Zodian
+  languagesUnderstood:
+    - Zodian
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ZodianTranslatorImplant
+  name: zodian translator implant
+  description: Provides the ability to understand and speak Zodian.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TranslatorImplant
+    understood:
+    - Zodian
+    spoken:
+    - Zodian
+
+- type: entity
+  id: ZodianTranslator
+  parent: [ TranslatorPoweredBase ]
+  name: Zodian translator
+  description: Translates speech between Zodian and Galactic Common.. May we survive the weather, though the forecast be stark..
+  components:
+  - type: HandheldTranslator
+    spoken:
+    - TauCetiBasic
+    - Zodian
+    understood:
+    - TauCetiBasic
+    - Zodian
+    requires:
+    - TauCetiBasic
+    - Zodian

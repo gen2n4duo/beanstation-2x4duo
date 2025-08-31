@@ -1,0 +1,23 @@
+- type: entity
+  id: ToolboxBunkerFilled
+  name: bunker toolbox
+  parent: ToolboxEmergency
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CableApcStack
+        amount: 2
+      - id: CableMVStack
+      - id: CableHVStack
+      - id: PowerCellMedium
+        amount: 2
+      - id: ClothingHandsGlovesColorYellow
+      - id: PowerCellSmall
+        amount: 1
+      - id: CrowbarRed
+      - id: Multitool
+      - id: ClothingHeadHatWelding
+      - id: Welder
+      - id: Wirecutter
+      - id: Wrench

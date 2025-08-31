@@ -108,7 +108,7 @@
     understands:
     - TauCetiBasic
     - Calcic
-  - type: SkeletonAccent
+#  - type: SkeletonAccent # did you know that mcdonalds is abroham lincon
   - type: Fixtures
     fixtures:
       fix1:

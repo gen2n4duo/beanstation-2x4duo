@@ -1,0 +1,27 @@
+- type: listing
+  id: SpellbookWizardryVessel
+  productUpgradeId: SpellbookBlinkUpgrade # Goobstation
+  name: spellbook-wizardry-vessel-name
+  description: spellbook-wizardry-vessel-desc
+  productEntity: ClothingWizardRobeInvisible
+  cost:
+    WizCoin: 1
+  categories:
+  - SpellbookEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: SpellbookMagicMirror
+  productUpgradeId: SpellbookBlinkUpgrade # Goobstation
+  name: spellbook-magicmirror-name
+  description: spellbook-magicmirror-desc
+  productEntity: BaseHandheldMagicMirror
+  cost:
+    WizCoin: 2
+  categories:
+  - SpellbookEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

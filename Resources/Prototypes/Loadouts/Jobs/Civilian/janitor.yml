@@ -89,15 +89,6 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: loadoutEffectGroup
-  id: SeniorJanitorial
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobJanitor
-      time: 187200 #52 hrs (1 hour per week for 1 year)
-
 # Head
 - type: loadout
   id: JanitorHead
@@ -146,9 +137,6 @@
 # Misc
 - type: loadout
   id: JanitorGoldenPlunger
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorJanitorial
   storage:
     back:
     - GoldenPlunger

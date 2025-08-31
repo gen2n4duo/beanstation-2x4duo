@@ -86,6 +86,7 @@
         - BorgModuleChemical
         - BorgModuleRescue
         - BorgModuleTopicals
+        - BorgModuleOpenHands
   - type: ItemSlots
     slots:
       cell_slot:

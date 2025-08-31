@@ -32,28 +32,28 @@
     - SpellbookFullRandom
     - SpellbookSemiRandom
 
-- type: listing
-  id: SpellbookRodForm
-  productUpgradeId: SpellbookRodFormUpgrade # Goobstation
-  name: spellbook-polymorph-rod-name
-  description: spellbook-polymorph-rod-desc
-  productAction: ActionPolymorphWizardRod
-  cost:
-    WizCoin: 2 # Goob edit
-  categories:
-  - SpellbookOffensive
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:BuyBeforeCondition # Goobstation
-    blacklist:
-    - SpellbookFullRandom
-    - SpellbookSemiRandom
-  - !type:StoreWhitelistCondition # Goobstation
-    blacklist:
-      tags:
-      - GrimoireGhost
-
+#- type: listing
+#  id: SpellbookRodForm
+#  productUpgradeId: SpellbookRodFormUpgrade # Goobstation
+#  name: spellbook-polymorph-rod-name
+#  description: spellbook-polymorph-rod-desc
+#  productAction: ActionPolymorphWizardRod
+#  cost:
+#    WizCoin: 2 # Goob edit
+#  categories:
+#  - SpellbookOffensive
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#    stock: 1
+#  - !type:BuyBeforeCondition # Goobstation
+#   blacklist:
+#    - SpellbookFullRandom
+#    - SpellbookSemiRandom
+#  - !type:StoreWhitelistCondition # Goobstation
+#    blacklist:
+#      tags:
+#      - GrimoireGhost
+#
 # Defensive
 - type: listing
   id: SpellbookForceWall
@@ -185,15 +185,15 @@
 #  - !type:ListingLimitedStockCondition
 #    stock: 1
 
-- type: listing
-  id: SpellbookWandLocker
-  name: spellbook-wand-locker-name
-  description: spellbook-wand-locker-description
-  productEntity: WeaponWandLocker
-  cost:
-    WizCoin: 2 # Goob edit
-  categories:
-  - SpellbookEquipment
+#- type: listing
+#  id: SpellbookWandLocker
+#  name: spellbook-wand-locker-name
+#  description: spellbook-wand-locker-description
+#  productEntity: WeaponWandLocker
+#  cost:
+#    WizCoin: 2 # Goob edit
+#  categories:
+#  - SpellbookEquipment
 
 - type: listing
   id: SpellbookHammerMjollnir
@@ -221,18 +221,18 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
-- type: listing
-  id: SpellbookStaffAnimation
-  name: spellbook-staff-animation-name
-  description: spellbook-staff-animation-description
-  productEntity: AnimationStaff
-  cost:
-    WizCoin: 3
-  categories:
-  - SpellbookEquipment
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+#- type: listing
+#  id: SpellbookStaffAnimation
+#  name: spellbook-staff-animation-name
+#  description: spellbook-staff-animation-description
+#  productEntity: AnimationStaff
+#  cost:
+#    WizCoin: 3
+#  categories:
+#  - SpellbookEquipment
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#    stock: 1
 
 # Event
 - type: listing

@@ -108,58 +108,47 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  - Outlaw
+  weight: 45
 
 - type: department
   id: Civilian
   name: department-Civilian
   description: department-Civilian-description
-  color: "#9FED58"
+  color: "#a3a3a3"
   weight: -10
   roles:
-  - Bartender
-  - Botanist
   - Boxer
   - Chaplain
-  - Chef
   - Clown
-  - HeadOfPersonnel
-  - Janitor
-  - Lawyer
-  - Librarian
   - Mime
   - Musician
-  - Passenger
   - Reporter
   - Visitor
   - Zookeeper
-  - ServiceWorker
 
 - type: department
   id: CentralCommand
   name: department-CentralCommand
   description: department-CentralCommand-description
-  color: "#0c344d"
+  color: "#007a0e"
   roles:
-  - CentralCommandOfficial
-  - CBURN
-  - ERTLeader
-  - ERTChaplain
-  - ERTJanitor
-  - ERTMedical
-  - ERTSecurity
-  - ERTEngineer
-  - DeathSquad
-  - HecuOperative
-  - BlueshieldOfficer # Goobstation - Start
-  - NanotrasenRepresentative
-  - NanotrasenCareerTrainer
-  - NavyOfficer
-  - NavyCaptain
-  - NavyOfficerUndercover
-  - SpecialOperationsOfficer
-  - Diplomat
-  - GovernmentMan # Goobstation - End
-  editorHidden: true
+  # - CentralCommandOfficial # replacing with councilor
+  - Councilor
+  - NanotrasenRepresentative  # Goobstation
+  - BlueshieldOfficer # Goobstation
+  - NanotrasenCareerTrainer # goobing
+  # these ones are disabled still -steve
+#  - CBURN
+#  - ERTLeader
+#  - ERTChaplain
+#  - ERTJanitor
+#  - ERTMedical
+#  - ERTSecurity
+#  - ERTEngineer
+#  - DeathSquad
+#  - HecuOperative
+  editorHidden: false
   weight: 120
 
 - type: department
@@ -168,6 +157,7 @@
   description: department-Command-description
   color: "#334E6D"
   roles:
+#  - CentralCommandOfficial
   - Captain
   - ChiefEngineer
   - ChiefMedicalOfficer
@@ -175,19 +165,17 @@
   - HeadOfSecurity
   - ResearchDirector
   - Quartermaster
-  - BlueshieldOfficer # Goobstation
-  - NanotrasenRepresentative # Goobstation
-  - NanotrasenCareerTrainer # Goobstation
-  - CentralCommandOfficial
-  - CBURN
-  - ERTLeader
-  - ERTChaplain
-  - ERTJanitor
-  - ERTMedical
-  - ERTSecurity
-  - ERTEngineer
-  - DeathSquad
-  - HecuOperative
+#  - NanotrasenRepresentative # Goobstation
+# still quite disabled -steve
+#  - CBURN
+#  - ERTLeader
+#  - ERTChaplain
+#  - ERTJanitor
+#  - ERTMedical
+#  - ERTSecurity
+#  - ERTEngineer
+#  - DeathSquad
+#  - HecuOperative
   primary: false
   weight: 100
 
@@ -201,6 +189,7 @@
   - ChiefEngineer
   - StationEngineer
   - TechnicalAssistant
+  weight: 60
 
 - type: department
   id: Medical
@@ -213,21 +202,23 @@
   - MedicalDoctor
   - MedicalIntern
   - Psychologist
-  - Paramedic
+#  - Paramedic (entirely unneeded lmao)
+  weight: 70
 
 - type: department
   id: Security
   name: department-Security
   description: department-Security-description
   color: "#DE3A3A"
-  weight: 20
+  weight: 80
   roles:
   - HeadOfSecurity
   - SecurityCadet
   - SecurityOfficer
   - Detective
   - Warden
-  - Brigmedic # Goob
+  - Maid
+  - Brigmedic
 
 - type: department
   id: Science
@@ -238,25 +229,52 @@
   - ResearchDirector
   - Scientist
   - ResearchAssistant
+  weight: 50
 
 - type: department
   id: Silicon
   name: department-Silicon
   description: department-Silicon-description
   color: "#D381C9"
+  weight: 10
   roles:
   - Borg
   - StationAi
+  
+- type: department
+  id: Service
+  name: department-Service
+  description: department-Service-description
+  color: "#9FED58"
+  weight: 30
+  roles:
+  - HeadOfPersonnel
+  - Botanist
+  - Chef
+  - Bartender
+  - Janitor
+  - Librarian
+  - ServiceWorker
+  - Lawyer
 
 - type: department
-  id: Specific
-  name: department-Specific
-  description: department-Specific-description
-  color: "#9FED58"
-  weight: 10
+  id: Assistance
+  name: department-Assistance
+  description: department-Assistance-description
+  color: "#a18672"
+  weight: 5
   roles:
-  - Boxer
-  - Reporter
-  - Zookeeper
-  - Psychologist
-  primary: false
+  - ServiceWorker
+  - SecurityCadet
+  - ResearchAssistant
+  - MedicalIntern
+  - TechnicalAssistant
+  - Passenger
+
+#- type: department
+#  id: Variant
+#  name: department-Variant
+#  description: department-Variant-description
+#  color: "#a18672"
+#  weight: 1
+#  roles:

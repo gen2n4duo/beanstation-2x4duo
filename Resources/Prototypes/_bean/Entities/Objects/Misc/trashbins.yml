@@ -1,0 +1,44 @@
+- type: entity
+  name: trash bin
+  id: TrashBinJanitor
+  parent: BaseStructure
+  description: A simple trash can. They're really running out of budget.
+  components:
+  - type: InteractionOutline
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ItemSlots
+    slots:
+      bag_slot:
+        name: trashbagdefault
+        startingItem: TrashBagBlue
+        disableEject: false
+        swap: false
+        whitelist:
+          tags:
+          - TrashBag
+  - type: Sprite
+    sprite: _bean/Structures/trashbins.rsi
+    state: default
+
+- type: entity
+  name: trash bin
+  id: TrashBinMedical
+  parent: TrashBinJanitor
+  components:
+  - type: Sprite
+    state: medical
+
+- type: entity
+  name: trash bin
+  id: TrashBinFancy
+  parent: TrashBinJanitor
+  components:
+  - type: Sprite
+    state: fancy

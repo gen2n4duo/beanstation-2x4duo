@@ -14,15 +14,6 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: loadoutEffectGroup
-  id: SeniorBlueshieldOfficer
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobBlueshieldOfficer
-      time: 187200
-
 # Hats
 - type: loadout
   id: BlueshieldOfficerHeadSwatHelmet
@@ -125,18 +116,12 @@
 # Neck
 - type: loadout
   id: BlueshieldOfficerOuterBlueshieldMantle
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBlueshieldOfficer
   equipment:
     neck: ClothingNeckMantleBlueshield
 
 # Mask
 - type: loadout
   id: BlueshieldOfficerMaskLollypop
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBlueshieldOfficer
   equipment:
     mask: FoodSnackLollypopBlueshield
 

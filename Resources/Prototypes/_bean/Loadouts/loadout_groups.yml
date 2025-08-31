@@ -1,0 +1,192 @@
+# maid
+- type: loadoutGroup
+  id: MaidHead
+  name: loadout-group-maid-head
+  minLimit: 0
+  loadouts:
+  - SecurityBeret
+
+- type: loadoutGroup
+  id: MaidJumpsuit
+  name: loadout-group-maid-jumpsuit
+  loadouts:
+  - MaidJumpsuit
+  - MaidJumpskirt
+
+- type: loadoutGroup
+  id: MaidOuterClothing
+  name: loadout-group-maid-outerclothing
+  loadouts:
+  - ArmorVest
+  - SecurityOfficerWintercoat
+  - MaidApron
+  - MaidVest
+  
+- type: loadoutGroup
+  id: MaidShoes
+  name: loadout-group-maid-shoes
+  loadouts:
+  - MaidGaloshes
+  - MaidHeels
+  - JackBoots
+  - SecurityWinterBoots
+
+- type: loadoutGroup
+  id: MaidGloves
+  minLimit: 0
+  name: loadout-group-maid-gloves
+  loadouts:
+  - MaidCombatGloves
+  - MaidGlovesAlt
+# councilor
+- type: loadoutGroup
+  id: CouncilHead
+  name: loadout-group-council-head
+  minLimit: 0
+  loadouts:
+  - CouncilGasMask
+  - CouncilCap
+
+- type: loadoutGroup
+  id: CouncilNeck
+  name: loadout-group-council-neck
+  minLimit: 0
+  loadouts:
+  - CouncilCloak
+  - CouncilScarf
+
+- type: loadoutGroup
+  id: CouncilJumpsuit
+  name: loadout-group-council-jumpsuit
+  loadouts:
+  - CouncilJumpsuit
+  - CouncilJumpsuitAlt
+  - CouncilFormalSuit
+  - CouncilFormalSkirt
+
+- type: loadoutGroup
+  id: CouncilBackpack
+  name: loadout-group-council-backpack
+  loadouts:
+  - CouncilBackpack
+  - CouncilDuffel
+  - CouncilSatchel
+  
+- type: loadoutGroup
+  id: CouncilOuterClothing
+  name: loadout-group-council-outerclothing
+  minLimit: 0
+  loadouts:
+  - CouncilOuterClothingInvis
+  - CouncilWintercoat
+  - CouncilOuterCarapaceClothing
+  - CouncilArmoredWintercoat
+  
+- type: loadoutGroup
+  id: CouncilShoes
+  name: loadout-group-council-shoes
+  loadouts:
+  - CouncilLaceups
+  - CouncilCombatBoots
+  - CouncilHeels
+
+# outlaw
+- type: loadoutGroup
+  id: OutlawHead
+  name: loadout-group-outlaw-head
+  minLimit: 0
+  loadouts:
+  - OutlawHat
+
+- type: loadoutGroup
+  id: OutlawNeck
+  name: loadout-group-outlaw-neck
+  minLimit: 0
+  loadouts:
+  - OutlawTie
+  - OutlawScarf
+
+- type: loadoutGroup
+  id: OutlawJumpsuit
+  name: loadout-group-outlaw-jumpsuit
+  loadouts:
+  - OutlawJumpsuit
+  - OutlawJumpskirt
+
+- type: loadoutGroup
+  id: OutlawOuterClothing
+  name: loadout-group-outlaw-outerclothing
+  minLimit: 0
+  loadouts:
+  - OutlawTrenchcoat
+  - OutlawJacket
+
+- type: loadoutGroup
+  id: OutlawGloves
+  name: loadout-group-outlaw-gloves
+  minLimit: 0
+  loadouts:
+  - OutlawGreenGloves
+  - OutlawCombatGloves
+
+- type: loadoutGroup
+  id: OutlawShoes
+  name: loadout-group-outlaw-shoes
+  loadouts:
+  - OutlawBoots
+  - OutlawLaceups
+
+- type: loadoutGroup
+  id: OutlawBackpack
+  name: loadout-group-outlaw-backpack
+  loadouts:
+  - CargoTechnicianBackpack
+  - CargoTechnicianSatchel
+  - CargoTechnicianDuffel
+  - CargoTechnicianMessenger # Frontier
+# money
+
+- type: loadout
+  id: Money10
+  storage:
+    back: 
+    - SpaceCash10
+  groupBy: "cash"
+
+- type: loadout
+  id: Money100
+  storage:
+    back: 
+    - SpaceCash100
+  groupBy: "cash"
+
+- type: loadout
+  id: Money500
+  storage:
+    back: 
+    - SpaceCash500
+  groupBy: "cash"
+  
+- type: loadout
+  id: Money1000
+  storage:
+    back: 
+    - SpaceCash1000
+  groupBy: "cash"
+
+- type: loadout
+  id: Money5000
+  storage:
+    back: 
+    - SpaceCash5000
+  groupBy: "cash"
+
+- type: loadoutGroup
+  id: MoneyRoundstart
+  name: loadout-group-cash
+  loadouts:
+  - Money10
+  - Money100
+  - Money500
+  - Money1000
+  - Money5000

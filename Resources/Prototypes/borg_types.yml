@@ -38,6 +38,8 @@
   - BorgModuleTool
   - BorgModuleArtifact
   - BorgModuleAnomaly
+  - BorgModuleOpenHands
+
   radioChannels:
   - Science
 
@@ -72,6 +74,7 @@
   - BorgModuleConstruction
   - BorgModuleRCD
   - BorgModuleCable
+  - BorgModuleOpenHands
 
   lawset: Engineer # DeltaV: Custom lawset
 
@@ -111,6 +114,7 @@
   - BorgModuleTraversal
   - BorgModuleAppraisal
   - BorgModulePKA # Lavaland
+  - BorgModuleOpenHands
 
   radioChannels:
   - Supply
@@ -154,6 +158,7 @@
   - BorgModuleTool
   - BorgModuleCleaning
   - BorgModuleCustodial
+  - BorgModuleOpenHands
 
   radioChannels:
   - Science
@@ -195,6 +200,7 @@
   - BorgModuleRescue
   - BorgModuleSurgery
   - BorgModuleLollypop # Goobstation
+  - BorgModuleOpenHands
 
   lawset: Medical # DeltaV: Custom lawset
 
@@ -255,6 +261,7 @@
   - BorgModuleGardening
   - BorgModuleHarvesting
   - BorgModuleLollypop # Goobstation
+  - BorgModuleOpenHands
 
   lawset: Clown # DeltaV: Custom lawset
 

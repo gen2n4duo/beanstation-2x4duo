@@ -8,20 +8,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 #Lost Frontier Prospector
 
-- type: loadoutEffectGroup
-  id: MasterMiner
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobSalvageSpecialist
-      time: 72000 #20 hours
-
 - type: loadout
   id: MinerCloak
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterMiner
   equipment:
     neck: ClothingNeckCloakSalvagerSupreme
 

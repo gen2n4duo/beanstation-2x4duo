@@ -1,0 +1,222 @@
+- type: entity
+  id: BorgChassisServiceBunnybot
+  parent: BorgChassisService
+  name: bunny service cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: service_bunnybot
+
+- type: borgSubtype
+  parentBorgType: service
+  id: service_bunnybot
+  spritePath: _bean/Mobs/Silicon/service.rsi
+  dummyPrototype: BorgChassisServiceBunnybot
+
+- type: entity
+  id: BorgChassisJanitorMaid
+  parent: BorgChassisJanitor
+  name: janitor maid cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: janitor_maidbot
+
+- type: borgSubtype
+  parentBorgType: janitor
+  id: janitor_maidbot
+  spritePath: _bean/Mobs/Silicon/janitor.rsi
+  dummyPrototype: BorgChassisJanitorMaid
+
+- type: entity
+  id: BorgChassisSecurityGuard
+  parent: BorgChassisSecurity
+  name: combative security cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: security_guardbot
+
+- type: borgSubtype
+  parentBorgType: security
+  id: security_guardbot
+  spritePath: _bean/Mobs/Silicon/security.rsi
+  dummyPrototype: BorgChassisSecurityGuard
+
+- type: entity
+  id: BorgChassisMedicalNurse
+  parent: BorgChassisMedical
+  name: medical nurse cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: medical_nursebot
+
+- type: borgSubtype
+  parentBorgType: medical
+  id: medical_nursebot
+  spritePath: _bean/Mobs/Silicon/medical.rsi
+  dummyPrototype: BorgChassisMedicalNurse
+
+- type: entity
+  id: BorgChassisEngineeringMulti
+  parent: BorgChassisEngineer
+  name: multiarmed engineering cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: engineer_multiarmbot
+
+- type: borgSubtype
+  parentBorgType: engineering
+  id: engineer_multiarmbot
+  spritePath: _bean/Mobs/Silicon/engineer.rsi
+  dummyPrototype: BorgChassisEngineeringMulti
+
+- type: entity
+  id: BorgChassisSalvageTallMiner
+  parent: BorgChassisMining
+  name: tall salvage cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_tallbot
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_tallbot
+  spritePath: _bean/Mobs/Silicon/salvage.rsi
+  dummyPrototype: BorgChassisSalvageTallMiner
+
+- type: entity
+  id: BorgChassisTallGeneric
+  parent: BorgChassisGeneric
+  name: tall cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: generic_tallbot
+
+- type: borgSubtype
+  parentBorgType: generic
+  id: generic_tallbot
+  spritePath: _bean/Mobs/Silicon/generic.rsi
+  dummyPrototype: BorgChassisTallGeneric
+
+- type: entity
+  id: BorgChassisSyndicateAssaultTall
+  parent: BorgChassisSyndicateAssault
+  name: tall syndicate assault cyborg
+  components:
+    - type: Sprite
+      sprite: _bean/Mobs/Silicon/syndiassault.rsi
+
+- type: entity
+  id: BorgChassisSyndicateSaboteurTall
+  parent: BorgChassisSyndicateSaboteur
+  name: tall syndicate saboteur cyborg
+  components:
+    - type: Sprite
+      sprite: _bean/Mobs/Silicon/syndisabo.rsi
+
+- type: entity
+  id: BorgChassisSyndicateMedicalTall
+  parent: BorgChassisSyndicateMedical
+  name: tall syndicate medical cyborg
+  components:
+    - type: Sprite
+      sprite: _bean/Mobs/Silicon/syndimed.rsi
+
+- type: entity
+  id: BorgChassisDerelictTall
+  parent: BorgChassisDerelict
+  name: tall derelict cyborg
+  components:
+    - type: Sprite
+      sprite: _bean/Mobs/Silicon/derelict.rsi
+
+- type: entity
+  id: PlayerBorgSyndicateMedicalTallBattery
+  parent: BorgChassisSyndicateMedicalTall
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleOperative
+        - BorgModuleAdvancedSurgery
+        - BorgModuleChemical
+        - BorgModuleRescue
+        - BorgModuleTopicals
+        - BorgModuleOpenHands
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+
+- type: entity
+  id: PlayerBorgSyndicateAssaultTallBattery
+  parent: BorgChassisSyndicateAssaultTall
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleL6C
+        - BorgModuleOperative
+        - BorgModuleEsword
+        - BorgModuleOpenHands
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+
+- type: entity
+  id: PlayerBorgSyndicateSaboteurTallBattery
+  parent: BorgChassisSyndicateSaboteurTall
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleSyndicateWeapon
+        - BorgModuleTool
+        - BorgModuleOperative
+        - BorgModuleOpenHands
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+
+- type: entity
+  id: PlayerBorgDerelictTallBattery
+  parent: BorgChassisDerelictTall
+  suffix: Battery, Module
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleTool
+        - BorgModuleFireExtinguisher
+        - BorgModuleOpenHands
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: RandomMetadata
+    nameSegments: [NamesBorg]

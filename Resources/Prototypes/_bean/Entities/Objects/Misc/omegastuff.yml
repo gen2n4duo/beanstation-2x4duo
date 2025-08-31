@@ -1,0 +1,52 @@
+- type: entity
+  name: radio jammer
+  parent: [RadioJammer]
+  id: RadioJammerOmega
+  suffix: DO NOT MAP, Omega
+  description: Removes radio communication from the entire station (hopefully.) Meant for Alert Omega RP scenarios.
+  components:
+  - type: RadioJammer
+    settings:
+    - wattage: 12
+      range: 9999999
+      message: radio-jammer-component-set-message-low
+      name: radio-jammer-component-setting-low
+    - wattage: 12
+      range: 9999999
+      message: radio-jammer-component-set-message-medium
+      name: radio-jammer-component-setting-medium
+    - wattage: 12
+      range: 9999999
+      message: radio-jammer-component-set-message-high
+      name: radio-jammer-component-setting-high
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellInfinite
+
+- type: entity
+  name: infinite-capacity power cell
+  description: Not normally obtainable. Meant for Alert Omega RP scenarios.
+  id: PowerCellInfinite
+  suffix: DO NOT MAP, Omega
+  parent: BasePowerCell
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: hyper
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 9999999
+    startingCharge: 99999999
+  - type: HitscanBatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 150

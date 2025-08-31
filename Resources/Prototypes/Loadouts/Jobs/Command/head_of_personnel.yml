@@ -75,25 +75,6 @@
 # SPDX-FileCopyrightText: 2025 starch <starchpersonal@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-# For mantles
-- type: loadoutEffectGroup
-  id: MasterHoP
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobHeadOfPersonnel
-      time: 72000 #20 hrs
-
-# Professional HoP Time
-- type: loadoutEffectGroup
-  id: ProfessionalHoP
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobHeadOfPersonnel
-      time: 54000 #15 hrs, special reward for HoP mains
 
 # Jumpsuit
 - type: loadout
@@ -131,9 +112,6 @@
   id: HoPMantle
   equipment:
     neck: ClothingNeckMantleHOP
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterHoP
 
 - type: startingGear
   id: HoPMantle
@@ -143,9 +121,6 @@
 # Back
 - type: loadout
   id: HoPBackpackIan
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ProfessionalHoP
   equipment:
     back: ClothingBackpackIan
 

@@ -1,0 +1,715 @@
+# most of this will be redistributed to it's own files... eventually.
+- type: entity
+  parent: ClothingHandsGlovesColorBlack
+  id: ClothingHandsGlovesOutlaw
+  name: outlaw gloves
+  description: Like normal gloves, but they're black and green. Cool, right?
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Specific/Outlaw/outlawgloves.rsi
+  - type: Clothing
+    sprite: _bean/Objects/Specific/Outlaw/outlawgloves.rsi
+  - type: Fiber
+    fiberColor: fibers-green
+    
+- type: entity
+  parent: ClothingHandsGlovesOutlaw
+  id: ClothingHandsGlovesOutlawInsulated
+  name: insulated outlaw gloves
+  components:
+  - type: Enchanter
+    enchants:
+    - EnchantInsulated
+    - EnchantProtFire
+  - type: Insulated
+
+- type: entity
+  name: outlaw's toolbox
+  parent: ToolboxBase
+  id: ToolboxOutlaw
+  description: A toolbox with tools. What? Did you expect Santa Claus?
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,3
+  - type: Sprite
+    sprite: _bean/Objects/Specific/Outlaw/outlawtoolbox.rsi
+    state: icon
+  - type: Item
+    sprite: _bean/Objects/Specific/Outlaw/outlawtoolbox.rsi
+
+- type: entity
+  id: ToolboxOutlawFilled
+  name: outlaw's toolbox
+  suffix: Filled
+  parent: ToolboxOutlaw
+  components:
+  - type: StorageFill
+    contents:
+    - id: CrowbarYellow
+    - id: Wrench
+    - id: Wirecutter
+    - id: Screwdriver
+    - id: GasAnalyzer
+    - id: trayScanner
+    - id: FlashlightLantern
+    - id: CableHVStack10
+    - id: CableApcStack10
+    - id: CableMVStack10
+
+- type: entity
+  parent: [BaseItem, BaseMagicalContraband]
+  id: BaseHandheldMagicMirror
+  name: handheld magic mirror
+  description: A magical mirror capable of altering your appearance! Retrieved from the castle of an ancient wizardry cult.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Specific/Outlaw/outlawmirror.rsi
+    state: icon
+  - type: WizardMirror
+    allowedSpecies:
+    - Human
+    - Reptilian
+    - SlimePerson
+    - Diona
+    - Vulpkanin
+    - Harpy
+    - Rodentia
+    - Oni
+    - Arachnid
+    - Moth
+    - Gingerbread
+    - Vox
+    - Resomi
+    - IPC
+    - BananaMen
+    - Kobold
+    - Monkey
+    - Tajaran
+  - type: ActivatableUI
+    key: enum.WizardMirrorUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.WizardMirrorUiKey.Key:
+        type: WizardMirrorBoundUserInterface
+  - type: Reflect
+    reflectProb: .5 # not crazy
+
+- type: entity
+  parent: [JawsOfLife, BaseMinorContraband]
+  id: JawsOfLifeBad
+  name: discount jaws of life
+  description: A cheap copy of the classic. Slow to the point of being borderline useless.
+  components:
+  - type: Prying
+    speedModifier: 0.1
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 10
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOnHighSpeedImpact
+    minimumSpeed: 2
+    damage:
+      types:
+        Blunt: 5
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: BaseImplantOnlyOutlawImplanter
+  parent: [ BaseImplantOnlyImplanter, BaseMajorContraband ]
+  name: outlaw implanter
+  description: A disposable syringe for all of your illegal implantation needs. No, you don't get anesthetic.
+  abstract: true
+  components:
+  - type: Item
+    sprite: _bean/Objects/Specific/Outlaw/outlawimplanter.rsi
+  - type: Sprite
+    sprite: _bean/Objects/Specific/Outlaw/outlawimplanter.rsi
+    state: implanter1
+    layers:
+      - state: implanter0
+        map: [ "implantFull" ]
+        visible: true
+      - state: implanter1
+        map: [ "implantOnly" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ImplanterVisuals.Full:
+        implantFull:
+          True: {visible: true}
+          False: {visible: false}
+      enum.ImplanterImplantOnlyVisuals.ImplantOnly:
+        implantOnly:
+          True: {state: broken}
+          False: {state: implanter1}
+  - type: Tag
+    tags: []
+
+- type: entity
+  id: OutlawNutrimentImplant
+  suffix: nutriment pump implanter
+  parent: BaseImplantOnlyOutlawImplanter
+  components:
+  - type: Implanter
+    implant: NutrimentPumpImplant
+
+- type: entity
+  id: OutlawStorageImplant
+  suffix: storage implanter
+  parent: BaseImplantOnlyOutlawImplanter
+  components:
+  - type: Implanter
+    implant: StorageImplant
+
+- type: entity
+  id: OutlawSpaceProofImplant
+  suffix: spaceproof implanter
+  parent: BaseImplantOnlyOutlawImplanter
+  components:
+  - type: Implanter
+    implant: SpaceProofImplant
+
+- type: entity
+  id: OutlawMindControlImplant
+  suffix: mind control implanter
+  parent: BaseImplantOnlyOutlawImplanter
+  components:
+  - type: Implanter
+    implant: MindcontrolImplant
+
+- type: entity
+  name: ohio weed
+  parent: [ ProduceBase, BaseMinorContraband ]
+  id: LeavesOhioWeed
+  description: A variant of Cannabis from the ancient Earth state of Ohio.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Specific/Hydroponics/ohioweed.rsi
+  - type: Produce
+    seedId: ohioWeed
+    sprite:
+      sprite: _bean/Objects/Specific/Hydroponics/ohioweed.rsi
+      state: produce
+  - type: Extractable
+    grindableSolutionName: powder
+    juiceSolution:
+      reagents:
+      - ReagentId: Omnispoke
+        Quantity: 15
+      - ReagentId: THC
+        Quantity: 10
+
+- type: reagent
+  id: Omnispoke
+  name: reagent-name-omnispoke
+  group: Botanical
+  desc: reagent-desc-omnispoke
+  flavor: spicy
+  color: "#00fffb"
+  physicalDesc: reagent-physical-desc-powdered
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+           Blunt: 0.1
+           Asphyxiation: 0.2
+      - !type:GenericStatusEffect
+        key: Brainrotted
+        component: OhioAccent
+      - !type:GenericStatusEffect
+        key: GermanSpeech
+        component: GermanAccent
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: StutteringAccent
+      - !type:GenericStatusEffect
+        key: MobsterSpeech
+        component: MobsterAccent
+      - !type:GenericStatusEffect
+        key: OWOSpeech
+        component: OwOAccent
+      - !type:GenericStatusEffect
+        key: PirateSpeech
+        component: PirateAccent
+      - !type:GenericStatusEffect
+        key: LizardSpeech
+        component: LizardAccent
+      - !type:GenericStatusEffect
+        key: FrenchSpeech
+        component: FrenchAccent
+      - !type:GenericStatusEffect
+        key: MothSpeech
+        component: MothAccent
+      - !type:GenericStatusEffect
+        key: SkeletonSpeech
+        component: SkeletonAccent
+      - !type:GenericStatusEffect
+        key: SouthernSpeech
+        component: SouthernAccent
+      - !type:GenericStatusEffect
+        key: SlurredSpeech
+        component: SlurredAccent
+      - !type:GenericStatusEffect
+        key: SpanishSpeech
+        component: SpanishAccent
+
+- type: entity
+  name: restraints box
+  parent: [BoxCardboard, BaseMinorContraband]
+  id: BoxRestraintsOutlaw
+  description: A box containing a muzzle, a blindfold, handcuffs, and an energy bola.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Storage/boxes.rsi
+    layers:
+      - state: outlawbox
+      - state: secrestraints
+  - type: Storage
+    grid:
+    - 0,0,3,1
+  - type: StorageFill
+    contents:
+      - id: Handcuffs
+      - id: BolaEnergy
+      - id: ClothingEyesBlindfold
+      - id: ClothingMaskMuzzle
+      - id: FoodSnackLollypopWrappedMystery
+
+- type: entity
+  id: ToolboxModularGrenadeFilled
+  name: outlaw's toolbox
+  suffix: Filled, Modular Grenade
+  parent: ToolboxOutlaw
+  components:
+  - type: Storage
+    grid:
+    - 0,0,2,7
+  - type: StorageFill
+    contents:
+    - id: ModularGrenade
+      amount: 3
+    - id: TimerTrigger
+      amount: 3
+    - id: ExplosivePayload
+    - id: ExplosivePayload
+    - id: ChemicalPayload
+    - id: Beaker
+      amount: 2
+    - id: CableApcStack10
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateOutlaw
+  name: outlaw's crate
+  description: A white crate with green bands and a letter O embossed on the front.
+  components:
+  - type: Icon
+    sprite: _bean/Structures/Storage/outlawcrate.rsi
+  - type: Sprite
+    sprite: _bean/Structures/Storage/outlawcrate.rsi
+    
+- type: entity
+  parent: CrateOutlaw
+  id: CrateOutlawShotgunImprovised
+  name: improvised shotgun case
+  suffix: Improvised Shotgun
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponShotgunImprovised
+    - id: ShellShotgunImprovised
+      amount: 3
+
+- type: entity
+  parent: CrateOutlaw
+  id: CrateOutlawCannon
+  name: pneumatic cannon case
+  suffix: Pneumatic Cannon
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponImprovisedPneumaticCannon
+    - id: EmergencyOxygenTankFilled
+      amount: 2
+
+- type: entity
+  parent: CrateOutlaw
+  id: CrateOutlawBow
+  name: bow case
+  suffix: Bow
+  components:
+  - type: StorageFill
+    contents:
+    - id: BowImprovised
+    - id: ArrowImprovised
+      amount: 3
+    - id: ArrowImprovisedPlasma
+      amount: 2
+    - id: ArrowImprovisedUranium
+
+- type: entity
+  parent: ClothingEyesNightVisionGoggles
+  id: ClothingEyesNightVisionGogglesFake
+  suffix: Fake
+  name: night vision goggles
+  description: Now you can see in the dark!
+  components:
+  - type: Sprite
+    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
+  - type: Clothing
+    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
+  - type: IdentityBlocker
+  - type: OnUseTimerTrigger
+    delay: 10
+    delayOptions: [10, 30, 60, 120, 300]
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 20.0
+    intensitySlope: 5
+    maxIntensity: 4
+
+- type: entity
+  name: flashbang box
+  parent: BoxCardboard
+  id: BoxFlashbangOutlaw
+  description: 'WARNING: These devices are extremely safe and should be thrown at everyone in your vicinity!!'
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Storage/boxes.rsi
+    layers:
+      - state: outlawbox
+      - state: flashbang
+  - type: Storage
+    grid:
+    - 0,0,2,3
+  - type: StorageFill
+    contents:
+      - id: GrenadeFlashBang
+        amount: 3
+
+- type: entity
+  name: lube and glue grenades box
+  parent: BoxReagentGrenades
+  id: OutlawGlueLubeBox
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Storage/boxes.rsi
+    layers:
+      - state: outlawbox
+      - state: flashbang
+
+- type: entity
+  parent: CrateOutlaw
+  id: CrateOutlawMaterials
+  name: base materials case
+  suffix: Materials, Base
+  components:
+  - type: StorageFill
+    contents:
+    - id: SheetSteel
+    - id: SheetPlastic
+    - id: SheetGlass
+    - id: MaterialCloth
+
+- type: entity
+  parent: CrateOutlaw
+  id: CrateOutlawMaterialsExotic
+  name: exotic materials case
+  suffix: Materials, Exotic
+  components:
+  - type: StorageFill
+    contents:
+    - id: SheetPlasma
+    - id: SheetPlasteel
+    - id: SheetUranium
+
+- type: entity
+  parent: CrateOutlaw
+  id: CrateOutlawMaterialsRare
+  name: rare materials case
+  suffix: Materials, Rare
+  components:
+  - type: StorageFill
+    contents:
+    - id: IngotGold
+    - id: IngotSilver
+    - id: MaterialDiamond
+
+- type: entity
+  parent: SnapPopBox
+  id: OutlawSnapPopBox
+  name: snap pop box
+  suffix: Outlaw
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: StorageFill
+    contents:
+    - id: SnapPop
+      amount: 10
+      
+- type: entity
+  parent: [ ClothingScarfBase, BaseMinorContraband ]
+  id: ClothingNeckScarfStripedOutlaw
+  name: striped outlaw green scarf
+  description: A stylish striped green scarf... wait a minute. You feel like you've already seen this before.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/syndiegreen.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/syndiegreen.rsi
+
+- type: entity
+  parent: ClothingNeckTieRed
+  id: ClothingNeckTieOutlaw
+  name: outlaw's tie
+  description: Fancy.
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/Neck/outlawtie.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/Neck/outlawtie.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatTrenchOutlaw
+  name: outlaw's trench coat
+  description: A comfy trench coat.
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/trenchcoat.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/trenchcoat.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 20
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatJacketOutlaw
+  name: outlaw's jacket
+  description: A thick jacket made of a xeno-leather. Has a cool ribcage design on the back.
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/outlawcoat.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/outlawcoat.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 2
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 20
+
+- type: entity
+  name: mattress
+  id: MattressOutlaw
+  parent: BaseStructure
+  description: This is used to lie in, sleep in or strap on. Resting here provides extremely slow healing.
+  components:
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Anchorable
+  - type: Pullable
+  - type: HealOnBuckle
+    damage:
+      types:
+        Poison: -0.1
+        Blunt: -0.1
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.05"
+        density: 190
+        mask:
+        - TableMask
+  - type: Sprite
+    sprite: _bean/Structures/Furniture/furniture.rsi
+    state: mattress
+    noRot: true
+  - type: Strap
+    position: Down
+    rotation: -90
+  - type: PlaceableSurface
+    placeCentered: true
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtOutlaw
+  name: outlaw jumpsuit
+  description: A fancy skirt-suit combo for illegal deals. Tie not included.
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/Uniforms/Jumpskirt/outlawskirt.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/Uniforms/Jumpskirt/outlawskirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitOutlaw
+  name: outlaw jumpsuit
+  description: A fancy suit for illegal deals. Tie not included.
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/Uniforms/Jumpsuit/outlawsuit.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/Uniforms/Jumpsuit/outlawsuit.rsi
+
+- type: entity
+  id: ClothingBeltAssaultOutlawFilled
+  parent: ClothingBeltAssault
+  suffix: Filled, Outlaw
+  components:
+  - type: Storage
+    whitelist:
+      tags:
+        - OutlawUplink
+        - Wrench
+        - Bottle
+        - Spray
+        - Brutepack
+        - Bloodpack
+        - Gauze
+        - Ointment
+        - CigPack
+        - Taser
+        - SecBeltEquip # Goobstation
+        - HandheldCrewMonitor # Goobstation
+        - EnergySpeedloader # Goobstation
+        - Sidearm # Goobstation
+      components:
+        - FlashOnTrigger
+        - SmokeOnTrigger
+        - Flash
+        - Handcuff
+        - BallisticAmmoProvider
+        - Ammo # mmm i love copypasted code
+  - type: StorageFill
+    contents:
+    - id: Brutepack
+    - id: Gauze
+    - id: WeaponPistolViper
+    - id: MagazinePistol
+    - id: CigPackBlack
+
+# this is oh so blatantly just my 'catchall' outlaw file now. i dont care about organization i hate doing it these files are a labyrinth
+
+# accents
+- type: statusEffect
+  id: GermanSpeech
+- type: statusEffect
+  id: MobsterSpeech
+- type: statusEffect
+  id: LizardSpeech
+- type: statusEffect
+  id: FrenchSpeech
+- type: statusEffect
+  id: MothSpeech
+- type: statusEffect
+  id: OWOSpeech
+- type: statusEffect
+  id: PirateSpeech
+- type: statusEffect
+  id: SpanishSpeech
+- type: statusEffect
+  id: RussianSpeech
+- type: statusEffect
+  id: SkeletonSpeech
+- type: statusEffect
+  id: SouthernSpeech
+# tag
+- type: Tag
+  id: OutlawUplink
+
+# they removed it so im readding it here...
+- type: entity
+  parent: [BaseItem, BaseMinorContraband]
+  id: DoorJack
+  name: door jack
+  suffix: Limited
+  description: An ancient device used for hacking doors, its far too old and damaged to last more than a few uses.
+  components:
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: Sprite
+    sprite: _Goobstation/Objects/Tools/doorjack.rsi
+    state: icon
+  - type: Item
+    sprite: _Goobstation/Objects/Tools/doorjack.rsi
+  - type: Emag
+    emagType: Access

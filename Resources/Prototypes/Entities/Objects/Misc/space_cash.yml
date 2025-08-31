@@ -103,6 +103,9 @@
       # doesn't spawn anything for probably obvious reasons
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Currency
+    price:
+      Spesos: 1
   - type: Food
     solution: food
     delay: 1

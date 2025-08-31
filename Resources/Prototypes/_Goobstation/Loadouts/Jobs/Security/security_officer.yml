@@ -17,17 +17,11 @@
 
 - type: loadout
   id: WinterCoatSeniorSecArmored
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
   equipment:
     outerClothing: ClothingOuterWinterSeniorSecArmored
 
 - type: loadout
   id: ClothingNeckCWPSec
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
   equipment:
     neck: ClothingNeckCWPSec
 

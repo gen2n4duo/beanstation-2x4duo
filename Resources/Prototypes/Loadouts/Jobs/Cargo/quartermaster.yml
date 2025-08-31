@@ -75,15 +75,6 @@
 # SPDX-FileCopyrightText: 2025 starch <starchpersonal@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-# For mantles
-- type: loadoutEffectGroup
-  id: MasterQM
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobQuartermaster
-      time: 72000 #20 hrs
 
 # Jumpsuit
 - type: loadout
@@ -145,9 +136,6 @@
   id: QuartermasterMantle
   equipment:
     neck: ClothingNeckMantleQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterQM
 
 - type: startingGear
   id: QuartermasterMantle

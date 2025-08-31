@@ -41,6 +41,7 @@
       - Monkey
       - Kobold
       - SpaceItalian
+      - Zodian
     understood:
       - Eldritch
       - Chittin
@@ -70,6 +71,7 @@
       - Monkey
       - Kobold
       - SpaceItalian
+      - Zodian
 
 - type: entity
   parent: BaseSubdermalImplant

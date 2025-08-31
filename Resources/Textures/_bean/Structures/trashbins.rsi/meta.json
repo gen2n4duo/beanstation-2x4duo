@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "googly booblgy",
+  "license": "CC-BY-SA-3.0",
+  "states": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "medical"
+    },
+    {
+      "name": "fancy"
+    }
+  ]
+}
