@@ -24,20 +24,20 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: gameMap
-  id: Reach
-  mapName: 'Reach'
-  mapPath: /Maps/_Goobstation/reach.yml
+  id: CanneliniBean
+  mapName: 'Cannelini'
+  mapPath: /Maps/_bean/cannelinibean.yml
   minPlayers: 0
   maxPlayers: 10
   stations:
-    Reach:
+    CanneliniBean:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Reach Transport {1}'
+          mapNameTemplate: '{0} Cannelini {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'SC'
+            prefixCreator: 'BS'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_cluster.yml
         - type: StationJobs
@@ -60,6 +60,9 @@
             StationEngineer: [ 1, 2 ]
             Scientist: [ 1, 1 ]
             Passenger: [ -1, -1 ]
+            Maid: [ 1, 1 ]
+            Outlaw: [ 1, 1 ]
+            Councilor: [ 1, 1 ]
 
         # Goobstation blob-config-start LOW
         - type: StationBlobConfig
