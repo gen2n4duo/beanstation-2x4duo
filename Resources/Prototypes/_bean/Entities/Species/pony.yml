@@ -1,0 +1,304 @@
+- type: entity
+  save: false
+  name: Urist McHooves
+  parent: [ BaseMobSpeciesOrganic ]
+  id: BaseMobPony
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Pony
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: full
+  - type: Body
+    prototype: Pony
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Pony
+  - type: Speech
+    speechVerb: Pony
+  - type: ReplacementAccent
+    accent: ponyspeech
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - TauCetiBasic
+    - Equestrian
+    understands:
+    - TauCetiBasic
+    - Equestrian
+  - type: TypingIndicator
+    proto: pony
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 5
+  - type: Tag
+    tags:
+    - Pony
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 3 # Goobstation value
+    weightlessFriction: 1
+    baseWeightlessModifier: 1
+    weightlessModifier: 0.8 # up from 0.7 base
+  - type: Sprite # sprite again because we want different layer ordering
+    noRot: true
+    drawdepth: Mobs
+    layers:
+      - map: [ "enum.HumanoidVisualLayers.Chest" ]
+      - map: [ "enum.HumanoidVisualLayers.Groin" ]
+      - map: [ "enum.HumanoidVisualLayers.Head" ]
+      - map: [ "enum.HumanoidVisualLayers.Snout" ]
+      - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+      - map: [ "enum.HumanoidVisualLayers.RArm" ]
+      - map: [ "enum.HumanoidVisualLayers.LArm" ]
+      - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+      - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+      - map: [ "enum.HumanoidVisualLayers.Underwear" ]
+      - map: [ "enum.HumanoidVisualLayers.Undershirt" ]
+      - map: [ "jumpsuit" ]
+      - map: [ "enum.HumanoidVisualLayers.LHand" ]
+      - map: [ "enum.HumanoidVisualLayers.RHand" ]
+      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+        color: "#ffffff"
+        sprite: Objects/Misc/handcuffs.rsi
+        state: body-overlay-2
+        visible: false
+      - map: [ "gloves" ]
+      - map: [ "shoes" ]
+      - map: [ "ears" ]
+      - map: [ "eyes" ]
+      - map: [ "belt" ]
+      - map: [ "id" ]
+      - map: [ "outerClothing" ]
+      - map: [ "back" ]
+      - map: [ "enum.HumanoidVisualLayers.Tail" ]
+      - map: [ "neck" ]
+      - map: [ "enum.HumanoidVisualLayers.Face" ]
+      - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+      - map: [ "maskalt" ]
+      - map: [ "mask" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+      - map: [ "head" ]
+      - map: [ "enum.HumanoidVisualLayers.Hair" ]
+      - map: [ "hair" ]
+      - map: [ "pocket1" ]
+      - map: [ "pocket2" ]
+      - map: [ "clownedon" ] # Dynamically generated
+        sprite: "Effects/creampie.rsi"
+        state: "creampie_moth"
+        visible: false
+  - type: Inventory
+    speciesId: pony
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: jumpsuit-female
+      back:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: outerclothing
+      gloves:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: shoes
+      belt:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: belt
+      ears:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: ears
+      eyes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: eyes
+      head:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: head
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: jumpsuit-male
+      back:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: outerclothing
+      gloves:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: shoes
+      belt:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: belt
+      ears:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: ears
+      eyes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: eyes
+      head:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: head
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 173 # fur i guess its the same as moth because i dont actually know what the fuck this setting does
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobPonyDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: Pony
+  - type: Inventory
+    speciesId: pony
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: jumpsuit-female
+      back:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: outerclothing
+      gloves:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: shoes
+      belt:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: belt
+      ears:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: ears
+      eyes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: eyes
+      head:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: head
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: jumpsuit-male
+      back:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: outerclothing
+      gloves:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: shoes
+      belt:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: belt
+      ears:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: ears
+      eyes:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: eyes
+      head:
+        sizeMaps:
+          32:
+            sprite: _bean/Mobs/Species/Pony/displacement.rsi
+            state: head

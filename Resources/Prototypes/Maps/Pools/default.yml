@@ -52,30 +52,33 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Atlas
-  - Amber
-  - Bagel
-  - Box
-  - Cluster
+   - PintoBean # scary my bean
+   - CanneliniBean
+   - SnapPeaBean
+#  - Atlas
+#  - Amber
+#  - Bagel
+#  - Box
+#  - Cluster
   #- Core
-  - Fland
+#  - Fland
  # - Gate Goobstation - My name is Walter Hartwell White, I live at 2308 Negra alloya line albequrque new mexico.
-  - Loop
-  - Marathon
-  - Meta
-  - Oasis
-  - Omega
-  - Origin
-  - Saltern
-  - Packed
-  - Reach
+#  - Loop
+#  - Marathon
+#  - Meta
+#  - Oasis
+#  - Omega
+#  - Origin
+#  - Saltern
+#  - Packed
+#  - Reach
 #  - Train # Goobstation - all my friends hate train
-  - FlandHighPop
-  - OasisHighPop
-  - Barratry # Goobstation - Re-add barratry
-  - Kettle # Goobstation - Re-add kettle (before it was gemini!)
-  - Submarine # goobstation - kill yourse
-  - Leonid # Goobstation - for goob by goob
-  - Delta # Goobstation - ported from Corvax
-  - Chloris # Goobstation - also Corvax because we love goidamaps
-  - Cog # those who forget to clear their multitool
+#  - FlandHighPop
+#  - OasisHighPop
+#  - Barratry # Goobstation - Re-add barratry
+#  - Kettle # Goobstation - Re-add kettle (before it was gemini!)
+#  - Submarine # goobstation - kill yourse
+#  - Leonid # Goobstation - for goob by goob
+#  - Delta # Goobstation - ported from Corvax
+#  - Chloris # Goobstation - also Corvax because we love goidamaps
+#  - Cog # those who forget to clear their multitool

@@ -1,0 +1,10 @@
+- type: damageModifierSet
+  id: Pony
+  coefficients:
+    Cold: 0.9
+    Heat: 1.1
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 1
+    Poison: 1.2
+  ignoreArmorPierceFlags: All

@@ -1,0 +1,40 @@
+# SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Armok <155400926+ARMOKS@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: constructionGraph
+  id: CookedJumboShrimp
+  start: start
+  graph:
+
+  - node: start
+    edges:
+    - to: cooked shrimp
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+
+  - node: cooked shrimp
+    entity: FoodMeatJumboShrimpCooked
+
+- type: constructionGraph
+  id: CookedJumboShrimpSlice
+  start: start
+  graph:
+
+  - node: start
+    edges:
+    - to: cooked shrimp slice
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+
+  - node: cooked shrimp slice
+    entity: FoodMeatJumboShrimpCookedSliced

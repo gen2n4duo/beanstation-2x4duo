@@ -1,0 +1,82 @@
+- type: language
+  id: Sychian
+  speech:
+    allowRadio: false
+    requireSpeech: false
+    color: "#eb8abf"
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    - fer
+    - fes
+    - se
+    - sez
+    - jah
+    - roi
+    - ro
+    - tazor
+    - taz
+    - ta
+    - tu
+    - tul
+    - tula
+    - vurs
+    - virs
+    - ri
+    - ris
+    - se
+    - sea
+    - iar
+    - iarz
+    - jara
+    - hara
+    - uta
+    - utar
+    - lula
+    - lua
+    - luo
+    - suro
+    - kuro
+    - vehe
+    - veha
+    - ve
+    - gar
+    - ala
+    - alar
+    - vaza
+    - zana
+    - zan
+    - kez
+    - kezn
+    - ke
+    - flor
+    - flos
+    - fi
+    - mez
+    - mezn
+    - mezon
+    - tural
+    - tur
+    - tu
+    - tor
+    - tolo
+    - tola
+    - ru
+    - ro
+    - rul
+    - rula
+
+- type: trait
+  id: Sychian
+  name: trait-language-sychian-name
+  description: trait-language-sychian-desc
+  category: LanguageTraits
+  cost: 1
+  components:
+  - type: LanguageSpeaker
+  languagesSpoken:
+    - Sychian
+  languagesUnderstood:
+    - Sychian

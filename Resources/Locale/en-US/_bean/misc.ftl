@@ -5,3 +5,7 @@ spellbook-wizardry-vessel-desc = With the power of bluespace, you can now use sp
 
 spellbook-magicmirror-desc = Borrowed from our friends in the Collective, with this magical mirror, you can change your appearance, species, gender, and more at will! Note. You may become stuck as a catgirl if misused.
 spellbook-magicmirror-name = Handheld Magic Mirror
+
+user-cannot-shoot-guns-1 = Your hands can't pull the trigger!
+
+loadout-group-ponytraits = Pony Trait Selector

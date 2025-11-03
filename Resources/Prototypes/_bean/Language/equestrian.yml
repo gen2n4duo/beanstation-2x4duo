@@ -1,0 +1,83 @@
+# pony language
+- type: language
+  id: Equestrian
+  isVisibleLanguage: true
+  speech:
+    color: "#eba0e8"
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement: # mostly random gibberish because im uncreative. sorry
+    - nei
+    - sh
+    - sho
+    - la
+    - ha
+    - i
+    - hai
+    - hey
+    - ke
+    - ala
+    - ser
+    - ru
+    - u
+    - al
+    - se
+    - haro
+    - tare
+    - re
+    - vi
+    - vis
+    - var
+    - yala
+    - lo
+    - he
+    - y
+    - rah
+    - cel
+    - lun
+    - cada
+    - na
+    - tw
+    - il
+    - mo
+    - a
+    - g
+    - ta
+    - uni
+    - pe
+    - sa
+    - ert
+    - pon
+    - ali
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: EquestrianTranslatorImplant
+  name: equestrian translator implant
+  description: Provides the ability to understand and speak Equestrian.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TranslatorImplant
+    understood:
+    - Equestrian
+    spoken:
+    - Equestrian
+
+- type: entity
+  id: EquestrianTranslator
+  parent: [ TranslatorPoweredBase ]
+  name: Equestrian translator
+  description: Translates speech between Equestrian and Galactic Common.
+  components:
+  - type: HandheldTranslator
+    spoken:
+    - TauCetiBasic
+    - Equestrian
+    understood:
+    - TauCetiBasic
+    - Equestrian
+    requires:
+    - TauCetiBasic
+    - Equestrian

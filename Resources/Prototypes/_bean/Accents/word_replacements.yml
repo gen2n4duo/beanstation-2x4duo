@@ -1,0 +1,12 @@
+- type: accent
+  id: ponyspeech
+  wordReplacements:
+    accent-pony-words-1: accent-pony-words-replace-1
+    accent-pony-words-2: accent-pony-words-replace-2
+    accent-pony-words-3: accent-pony-words-replace-3
+    accent-pony-words-4: accent-pony-words-replace-4
+    accent-pony-words-5: accent-pony-words-replace-5
+    accent-pony-words-6: accent-pony-words-replace-6
+    accent-pony-words-7: accent-pony-words-replace-7
+    accent-pony-words-8: accent-pony-words-replace-8
+    accent-pony-words-9: accent-pony-words-replace-9

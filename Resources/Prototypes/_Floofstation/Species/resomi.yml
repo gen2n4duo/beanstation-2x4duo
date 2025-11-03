@@ -49,6 +49,7 @@
 
 - type: markingPoints
   id: MobResomiMarkingLimits
+  onlyWhitelisted: true # how the fuck did this get removed
   points:
     Hair:
       points: 1

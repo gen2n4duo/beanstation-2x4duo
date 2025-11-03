@@ -1,0 +1,214 @@
+# i'm not even a brony i did this for one of my friends. i love my friends. friendship is great
+
+- type: species
+  id: Pony
+  name: species-name-pony
+  roundStart: true
+  prototype: MobPony
+  sprites: MobPonySprites
+  defaultSkinTone: "#f7b0f0"
+  markingLimits: MobPonyMarkingLimits
+  dollPrototype: MobPonyDummy
+  skinColoration: Hues
+  maleFirstNames: NamesPonyFirst
+  femaleFirstNames: NamesPonyFirst
+  lastNames: NamesPonyLast
+  # begin Goobstation: port EE height/width sliders
+  minHeight: 0.75
+  defaultHeight: 1
+  maxHeight: 1.20
+  minWidth: 0.80
+  defaultWidth: 1
+  maxWidth: 1.20
+  # end Goobstation: port EE height/width sliders
+
+- type: speciesBaseSprites
+  id: MobPonySprites
+  sprites:
+    Hair: MobHumanoidAnyMarking
+    Head: MobPonyHead
+    Face: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Underwear: MobHumanoidAnyMarking
+    Undershirt: MobHumanoidAnyMarking
+    Chest: MobPonyChest
+    Groin: MobPonyGroin
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    Eyes: MobPonyEyes
+    LArm: MobPonyLArm
+    RArm: MobPonyRArm
+    LHand: MobPonyLHand
+    RHand: MobPonyRHand
+    LLeg: MobPonyLLeg
+    RLeg: MobPonyRLeg
+    LFoot: MobPonyLFoot
+    RFoot: MobPonyRFoot
+
+- type: humanoidBaseSprite
+  id: MobPonyEyes
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: eyes
+
+- type: markingPoints
+  id: MobPonyMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 0
+      required: false
+    Tail:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    HeadTop:
+      points: 2
+      required: false
+    HeadSide:
+      points: 8
+      required: false
+    Head:
+      points: 8
+      required: false
+    Chest:
+      points: 8
+      required: false
+    Underwear:
+      points: 1
+      required: false
+    Undershirt:
+      points: 1
+      required: false
+    RightLeg:
+      points: 2
+      required: false
+    RightFoot:
+      points: 2
+      required: false
+    LeftLeg:
+      points: 2
+      required: false
+    LeftFoot:
+      points: 2
+      required: false
+    RightArm:
+      points: 2
+      required: false
+    RightHand:
+      points: 2
+      required: false
+    LeftArm:
+      points: 2
+      required: false
+    LeftHand:
+      points: 2
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobPonyHead
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobPonyHeadMale
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobPonyHeadFemale
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobPonyChest
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: chest_m
+
+- type: humanoidBaseSprite
+  id: MobPonyChestMale
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: chest_m
+
+- type: humanoidBaseSprite
+  id: MobPonyChestFemale
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: chest_f
+
+- type: humanoidBaseSprite
+  id: MobPonyGroin
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobPonyGroinMale
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: groin_m
+
+- type: humanoidBaseSprite
+  id: MobPonyGroinFemale
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: groin_f
+
+- type: humanoidBaseSprite
+  id: MobPonyLLeg
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPonyLHand
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPonyLArm
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPonyLFoot
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPonyRLeg
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPonyRHand
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPonyRArm
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPonyRFoot
+  baseSprite:
+    sprite: _bean/Mobs/Species/Pony/parts.rsi
+    state: r_foot

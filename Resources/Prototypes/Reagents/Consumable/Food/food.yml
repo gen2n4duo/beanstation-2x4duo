@@ -80,7 +80,7 @@
         probability: 0.5
         damage:
           groups:
-            Brute: -0.4
+            Brute: -0.4            
       - !type:ModifyBloodLevel
         amount: 1 # weaker than iron but pretty good all things considered
       - !type:SatiateHunger

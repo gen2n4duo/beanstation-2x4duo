@@ -1,0 +1,60 @@
+- type: storeCategory
+  id: PonyRacialTraits
+  name: store-category-racialtraits
+
+- type: currency
+  id: RaceToken
+  displayName: store-currency-display-ponytraits
+  canWithdraw: false
+  
+- type: listing
+  id: PonyTraitTeleport
+  name: unicorntrait-name
+  description: unicorntrait-desc
+  productAction: ActionTeleportWizard
+  cost:
+    RaceToken: 1
+  categories:
+  - PonyRacialTraits
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: entity
+  id: StorePonyTraits
+  abstract: true
+  components:
+  - type: Store
+    name: store-ponytraits-name
+    categories:
+    - PonyRacialTraits
+    currencyWhitelist:
+    - RaceToken
+
+- type: entity
+  parent: [BaseItem, StorePonyTraits]
+  id: BasePonySelector
+  name: pony trait selector
+  description: The world's laziest excuse to not learn C#.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: radio
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: radio
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    balance:
+    ownerOnly: true # NO CHEATING
+      RaceToken: 1
+
+- type: Tag
+  id: Pony

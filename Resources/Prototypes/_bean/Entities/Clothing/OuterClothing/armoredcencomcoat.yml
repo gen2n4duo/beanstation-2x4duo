@@ -18,3 +18,57 @@
         Slash: 0.65
         Piercing: 0.67
         Heat: 0.80
+
+- type: entity
+  parent: [ ClothingOuterWinterCapArmored ]
+  id: ClothingOuterWinterArmoredOrder
+  name: orderly coat
+  description: To each the spoils of grit and toil, the worthiest shall rise!
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/order_coat.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/order_coat.rsi
+  - type: Item
+    size: Normal
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHeadHatHoodArmoredOrder
+
+- type: entity
+  parent: ClothingHeadHatHoodWinterCapFancy
+  id: ClothingHeadHatHoodArmoredOrder
+  categories: [ HideSpawnMenu ]
+  name: orderly coat hood
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/Head/Hoods/purpose_hood.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/Head/Hoods/purpose_hood.rsi
+
+- type: entity
+  parent: [ ClothingOuterWinterCapArmored ]
+  id: ClothingOuterWinterArmoredFaith
+  name: faithful coat
+  description: But each on Earth has equal worth when seen through Heaven's eyes!
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/faith_coat.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/OuterClothing/WinterCoats/faith_coat.rsi
+  - type: Item
+    size: Normal
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHeadHatHoodArmoredFaith
+
+- type: entity
+  parent: ClothingHeadHatHoodWinterCapFancy
+  id: ClothingHeadHatHoodArmoredFaith
+  categories: [ HideSpawnMenu ]
+  name: faithful coat hood
+  components:
+  - type: Sprite
+    sprite: _bean/Clothing/Head/Hoods/purpose_hood.rsi
+  - type: Clothing
+    sprite: _bean/Clothing/Head/Hoods/purpose_hood.rsi

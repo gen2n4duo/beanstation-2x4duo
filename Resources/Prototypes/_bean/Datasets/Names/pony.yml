@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesPonyFirst
+  values:
+    prefix: names-pony-first-dataset-
+    count: 40
+
+- type: localizedDataset
+  id: NamesPonyLast
+  values:
+    prefix: names-pony-last-dataset-
+    count: 40

@@ -1,0 +1,99 @@
+# SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2024 CMDR-Piboy314 <92357316+CMDR-Piboy314@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Piras314 <92357316+Piras314@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Armok <155400926+ARMOKS@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  name: raw jumbo shrimp
+  parent: FoodMeatRawBase
+  id: FoodMeatJumboShrimp
+  description: A particularly oversized shrimp.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Consumable/Food/jumboshrimp.rsi
+    state: rawjumboshrimp
+  - type: SliceableFood
+    slice: FoodMeatJumboShrimpSliced
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 40
+        - ReagentId: Fat
+          Quantity: 15
+  - type: Construction
+    graph: CookedJumboShrimp
+    node: start
+    defaultTarget: cooked shrimp
+
+- type: entity
+  name: cooked jumbo shrimp
+  parent: FoodMeatBase
+  id: FoodMeatJumboShrimpCooked
+  description: May cause crew chaos.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Consumable/Food/jumboshrimp.rsi
+    state: cookedjumboshrimp
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 40
+        - ReagentId: Protein
+          Quantity: 15
+  - type: Construction
+    graph: CookedJumboShrimp
+    node: cooked shrimp
+
+# sliced
+
+- type: entity
+  name: raw jumbo shrimp slice
+  parent: FoodMeatRawBase
+  id: FoodMeatJumboShrimpSliced
+  description: A cut of a particularly oversized shrimp.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Consumable/Food/jumboshrimp.rsi
+    state: sliceplaceholder
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 20
+        - ReagentId: Fat
+          Quantity: 5
+  - type: Construction
+    graph: CookedJumboShrimpSlice
+    node: start
+    defaultTarget: cooked shrimp slice
+
+- type: entity
+  name: cooked jumbo shrimp slice
+  parent: FoodMeatRawBase
+  id: FoodMeatJumboShrimpCookedSliced
+  description: May cause partial crew chaos.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Consumable/Food/jumboshrimp.rsi
+    state: sliceplaceholder
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Protein
+          Quantity: 5
+  - type: Construction
+    graph: CookedJumboShrimpSlice
+    node: cooked shrimp slice

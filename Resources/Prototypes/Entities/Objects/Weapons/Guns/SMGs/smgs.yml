@@ -270,10 +270,9 @@
     - type: RestrictGunshotsByUserTag # Goobstation
       doesntContain:
       - Oni
+      - Pony
       messages:
-      - oni-cannot-shoot-guns-1
-      - oni-cannot-shoot-guns-2
-      - oni-cannot-shoot-guns-3
+      - user-cannot-shoot-guns-1
 
 - type: entity
   name: WT550 autorifle # Goobstation

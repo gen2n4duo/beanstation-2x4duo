@@ -1,0 +1,55 @@
+# hair
+- type: marking
+  id: PonyHairTest
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: testhair
+
+- type: marking
+  id: PonyHairLaughter
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: laughtermane
+
+# tail
+- type: marking
+  id: PonyTailTest
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: testtail
+
+- type: marking
+  id: PonyTailLaughter
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: laughtertail

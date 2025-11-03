@@ -1,0 +1,24 @@
+- type: loadoutEffectGroup
+  id: EffectSpeciesPony
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Pony
+
+- type: loadout
+  id: PonyTraitSelector
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPony
+  storage:
+    back:
+    - BasePonySelector
+
+- type: loadoutGroup
+  id: GroupPonyTraits
+  name: loadout-group-ponytraits
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PonyTraitSelector
+

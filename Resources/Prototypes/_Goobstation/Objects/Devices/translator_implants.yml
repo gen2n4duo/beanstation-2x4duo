@@ -42,6 +42,7 @@
       - Kobold
       - SpaceItalian
       - Zodian
+      - Equestrian
     understood:
       - Eldritch
       - Chittin
@@ -72,6 +73,7 @@
       - Kobold
       - SpaceItalian
       - Zodian
+      - Equestrian
 
 - type: entity
   parent: BaseSubdermalImplant

@@ -1,0 +1,52 @@
+- type: trait
+  id: Multilingual
+  name: trait-language-multi-name
+  description: trait-language-multi-desc
+  category: LanguageTraits
+  cost: -1
+  components:
+  - type: Sprite # this is required in order for the game to not freak out lmao i guess the trait requires a component even if it goes unused
+
+- type: trait
+  id: ForeignerExtreme
+  name: trait-language-foreigner-extreme-name
+  description: trait-language-foreigner-extreme-desc
+  category: LanguageTraits
+  cost: -3
+  components:
+  - type: ForeignerTrait
+    baseTranslator: TranslatorBroken
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: TranslatorBrokenParentObject
+  parent: [ TranslatorUnpowered, PowerCellSlotMediumItem ]
+  components:
+  - type: ItemToggle
+  - type: PowerCellDraw
+    drawRate: 9999999999999999999999
+
+- type: entity
+  id: TranslatorBroken
+  name: broken translator
+  description: This used to translate, but.. well, now it doesn't!
+  parent: [ TranslatorBrokenParentObject ]
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Devices/translator.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: translator
+        shader: unshaded
+        visible: false
+        map: [ "enum.ToggleableVisuals.Layer", "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ShockOnTrigger
+  - type: TriggerOnUse

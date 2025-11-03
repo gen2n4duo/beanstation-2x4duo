@@ -1,0 +1,18 @@
+# ponies
+
+- type: typingIndicator
+  id: pony
+  spritePath: /Textures/_bean/Effects/speech.rsi
+  typingState: pony0
+  idleState: pony0
+  offset: 0, 0.0625 # adjust later
+
+- type: speechVerb
+  id: Pony
+  name: chat-speech-verb-name-pony
+  speechVerbStrings:
+  - chat-speech-verb-pony-1
+  - chat-speech-verb-pony-2
+  - chat-speech-verb-pony-3
+
+# putting these all in the same file because i cannot be bothered
