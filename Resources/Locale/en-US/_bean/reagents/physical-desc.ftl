@@ -4,3 +4,4 @@ reagent-physical-desc-atrocious = atrocious
 reagent-physical-desc-boilbubble = violently boiling
 reagent-physical-desc-powdered = powdery
 reagent-physical-desc-soupy = soupy
+reagent-physical-desc-thinwatery = thin and watery

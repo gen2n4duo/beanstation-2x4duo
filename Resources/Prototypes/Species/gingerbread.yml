@@ -14,6 +14,9 @@
   sprites: MobGingerbreadSprites
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobGingerbreadDummy
+  maleFirstNames: NamesGingerbreadFirst
+  femaleFirstNames: NamesGingerbreadFirst
+  lastNames: NamesGingerbreadLast
   skinColoration: HumanToned
   defaultSkinTone: "#9a7c5a"
 
@@ -41,25 +44,25 @@
 - type: humanoidBaseSprite
   id: MobGingerbreadEyes
   baseSprite:
-    sprite: Mobs/Customization/eyes.rsi
-    state: no_eyes
+    sprite: _bean/Mobs/Species/Gingerbread/parts.rsi
+    state: eyes
 
 - type: humanoidBaseSprite
   id: MobGingerbreadHead
   baseSprite:
-    sprite: Mobs/Species/Gingerbread/parts.rsi
+    sprite: _bean/Mobs/Species/Gingerbread/parts.rsi
     state: head_m
 
 - type: humanoidBaseSprite
   id: MobGingerbreadHeadMale
   baseSprite:
-    sprite: Mobs/Species/Gingerbread/parts.rsi
+    sprite: _bean/Mobs/Species/Gingerbread/parts.rsi
     state: head_m
 
 - type: humanoidBaseSprite
   id: MobGingerbreadHeadFemale
   baseSprite:
-    sprite: Mobs/Species/Gingerbread/parts.rsi
+    sprite: _bean/Mobs/Species/Gingerbread/parts.rsi
     state: head_f
 
 - type: humanoidBaseSprite

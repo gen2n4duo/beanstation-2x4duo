@@ -1,0 +1,2721 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineGlow
+  name: Glowdrobe
+  description: A vending machine containing lights.
+  components:
+  - type: VendingMachine
+    pack: GlowdrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: GlowdrobeAds
+  - type: SpeakOnUIClosed
+    pack: GlowDrobeGoodbyes
+  - type: Speech
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3 # reduced energy since the color is pure white
+    color: "#FFFFFF"
+  - type: Sprite
+    sprite: _bean\Structures\VendingMachines\glow.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: vendingMachineInventory
+  id: GlowdrobeInventory
+  startingInventory:
+    ContactsUnit: 10
+    ClothingNeckGlowpinMagenta: 5
+    ClothingNeckGlowpinPurple: 5
+    ClothingNeckGlowpinBlue: 5
+    ClothingNeckGlowpinCyan: 5
+    ClothingNeckGlowpinGreen: 5
+    ClothingNeckGlowpinYellow: 5
+    ClothingNeckGlowpinOrange: 5
+    ClothingNeckGlowpinRed: 5
+    ClothingNeckGlowpinBase: 5
+
+- type: localizedDataset
+  id: GlowdrobeAds
+  values:
+    prefix: advertisement-glowdr-
+    count: 4
+
+- type: localizedDataset
+  id: GlowDrobeGoodbyes
+  values:
+    prefix: thankyou-glowdr-
+    count: 3
+
+# i'll move all of these to their proper locations Eventually im just lazy
+
+# contacts
+- type: entity
+  name: white glowing contacts
+  parent: ClothingEyesBase
+  id: ClothingContactsBase
+  description: Removed Herobrine.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#FFFFFF"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#FFFFFF"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#FFFFFF"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#FFFFFF"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#FFFFFF"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#FFFFFF"
+          shader: unshaded
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 1
+      netsync: false
+      
+- type: entity
+  name: red glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsRed
+  description: W3 M4K3 OUR OWN LUCK
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#fc0303"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#fc0303"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#fc0303"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#fc0303"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#fc0303"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#fc0303"
+          shader: unshaded
+    - type: PointLight
+      color: "#fc0303"
+
+- type: entity
+  name: orange glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsOrange
+  description: Fruit lamp.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#ff8821"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ff8821"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#ff8821"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#ff8821"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#ff8821"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#ff8821"
+          shader: unshaded
+    - type: PointLight
+      color: "#ff8821"
+      
+- type: entity
+  name: yellow glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsYellow
+  description: Kind of like a creature in the night.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#ffe121"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ffe121"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#ffe121"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#ffe121"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#ffe121"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#ffe121"
+          shader: unshaded
+    - type: PointLight
+      color: "#ffe121"
+      
+- type: entity
+  name: green glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsGreen
+  description: Elite hacker eye color.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#67ff21"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#67ff21"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#67ff21"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#67ff21"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#67ff21"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#67ff21"
+          shader: unshaded
+    - type: PointLight
+      color: "#67ff21"
+      
+- type: entity
+  name: cyan glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsCyan
+  description: I'm gonna have a bad time.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#21fffb"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#21fffb"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#21fffb"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#21fffb"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#21fffb"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#21fffb"
+          shader: unshaded
+    - type: PointLight
+      color: "#21fffb"
+
+- type: entity
+  name: blue glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsBlue
+  description: I have special eyes...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#2176ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#2176ff"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#2176ff"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#2176ff"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#2176ff"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#2176ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#2176ff"
+
+- type: entity
+  name: purple glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsPurple
+  description: I definitely do not have SROS!
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#9421ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#9421ff"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#9421ff"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#9421ff"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#9421ff"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#9421ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#9421ff"
+
+- type: entity
+  name: magenta glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsMagenta
+  description: Some people even call this 'purple.'
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#de21ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#de21ff"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#de21ff"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#de21ff"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#de21ff"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#de21ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#de21ff"
+      
+- type: entity
+  name: sros glowing contacts
+  parent: ClothingContactsBase
+  id: ClothingContactsSROS
+  description: Tryna fall asleep with all these sirens making sounds...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      layers:
+      - state: icon
+        color: "#a621ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/contacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#a621ff"
+          shader: unshaded
+        eyes-pony:
+        - state: equipped-EYES-pony
+          color: "#a621ff"
+          shader: unshaded
+        eyes-vox:
+        - state: equipped-EYES-vox
+          color: "#a621ff"
+          shader: unshaded
+        eyes-resomi:
+        - state: equipped-EYES-resomi
+          color: "#a621ff"
+          shader: unshaded
+        eyes-moth:
+        - state: equipped-EYES-moth
+          color: "#a621ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#a621ff"
+    - type: FlashImmunity
+    - type: EyeProtection
+    - type: VisionCorrection
+
+# arachnids
+
+- type: entity
+  name: white glowing contacts
+  parent: ClothingEyesBase
+  id: ClothingContactsBaseArachnid
+  suffix: Arachnid
+  description: Removed Herobrine.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#FFFFFF"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#FFFFFF"
+          shader: unshaded
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 1
+      netsync: false
+
+- type: entity
+  name: red glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsRedArachnid
+  suffix: Arachnid
+  description: W3 M4K3 OUR OWN LUCK
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#fc0303"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#fc0303"
+          shader: unshaded
+    - type: PointLight
+      color: "#fc0303"
+
+- type: entity
+  name: orange glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsOrangeArachnid
+  suffix: Arachnid
+  description: Fruit lamp.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#ff8821"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ff8821"
+          shader: unshaded
+    - type: PointLight
+      color: "#ff8821"
+      
+- type: entity
+  name: yellow glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsYellowArachnid
+  suffix: Arachnid
+  description: Kind of like a creature in the night.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#ffe121"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ffe121"
+          shader: unshaded
+    - type: PointLight
+      color: "#ffe121"
+      
+- type: entity
+  name: green glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsGreenArachnid
+  suffix: Arachnid
+  description: Elite hacker eye color.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#67ff21"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#67ff21"
+          shader: unshaded
+    - type: PointLight
+      color: "#67ff21"
+      
+- type: entity
+  name: cyan glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsCyanArachnid
+  suffix: Arachnid
+  description: I'm gonna have a bad time.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#21fffb"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#21fffb"
+          shader: unshaded
+    - type: PointLight
+      color: "#21fffb"
+
+- type: entity
+  name: blue glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsBlueArachnid
+  suffix: Arachnid
+  description: I have special eyes...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#2176ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#2176ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#2176ff"
+
+- type: entity
+  name: purple glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsPurpleArachnid
+  suffix: Arachnid
+  description: I definitely do not have SROS!
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#9421ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#9421ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#9421ff"
+
+- type: entity
+  name: magenta glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsMagentaArachnid
+  suffix: Arachnid
+  description: Some people even call this 'purple.'
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#de21ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#de21ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#de21ff"
+
+- type: entity
+  name: sros glowing contacts
+  parent: ClothingContactsBaseArachnid
+  id: ClothingContactsSROSArachnid
+  suffix: Arachnid
+  description: Tryna fall asleep with all these sirens making sounds...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      layers:
+      - state: icon
+        color: "#a621ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/arachcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#a621ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#a621ff"
+    - type: FlashImmunity
+    - type: EyeProtection
+    - type: VisionCorrection
+
+# diona
+
+- type: entity
+  name: white glowing contacts
+  parent: ClothingEyesBase
+  id: ClothingContactsBaseDiona
+  suffix: Diona
+  description: Removed Herobrine.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#FFFFFF"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#FFFFFF"
+          shader: unshaded
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 1
+      netsync: false
+
+- type: entity
+  name: red glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsRedDiona
+  suffix: Diona
+  description: W3 M4K3 OUR OWN LUCK
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#fc0303"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#fc0303"
+          shader: unshaded
+    - type: PointLight
+      color: "#fc0303"
+
+- type: entity
+  name: orange glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsOrangeDiona
+  suffix: Diona
+  description: Fruit lamp.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#ff8821"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ff8821"
+          shader: unshaded
+    - type: PointLight
+      color: "#ff8821"
+      
+- type: entity
+  name: yellow glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsYellowDiona
+  suffix: Diona
+  description: Kind of like a creature in the night.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#ffe121"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ffe121"
+          shader: unshaded
+    - type: PointLight
+      color: "#ffe121"
+      
+- type: entity
+  name: green glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsGreenDiona
+  suffix: Diona
+  description: Elite hacker eye color.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#67ff21"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#67ff21"
+          shader: unshaded
+    - type: PointLight
+      color: "#67ff21"
+      
+- type: entity
+  name: cyan glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsCyanDiona
+  suffix: Diona
+  description: I'm gonna have a bad time.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#21fffb"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#21fffb"
+          shader: unshaded
+    - type: PointLight
+      color: "#21fffb"
+
+- type: entity
+  name: blue glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsBlueDiona
+  suffix: Diona
+  description: I have special eyes...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#2176ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#2176ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#2176ff"
+
+- type: entity
+  name: purple glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsPurpleDiona
+  suffix: Diona
+  description: I definitely do not have SROS!
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#9421ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#9421ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#9421ff"
+
+- type: entity
+  name: magenta glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsMagentaDiona
+  suffix: Diona
+  description: Some people even call this 'purple.'
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#de21ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#de21ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#de21ff"
+
+- type: entity
+  name: sros glowing contacts
+  parent: ClothingContactsBaseDiona
+  id: ClothingContactsSROSDiona
+  suffix: Diona
+  description: Tryna fall asleep with all these sirens making sounds...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      layers:
+      - state: icon
+        color: "#a621ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/dionacontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#a621ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#a621ff"
+    - type: FlashImmunity
+    - type: EyeProtection
+    - type: VisionCorrection
+
+# gingerbreads
+
+- type: entity
+  name: white glowing contacts
+  parent: ClothingEyesBase
+  id: ClothingContactsBaseGingerbread
+  suffix: Gingerbread
+  description: Removed Herobrine.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#FFFFFF"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#FFFFFF"
+          shader: unshaded
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 1
+      netsync: false
+
+- type: entity
+  name: red glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsRedGingerbread
+  suffix: Gingerbread
+  description: W3 M4K3 OUR OWN LUCK
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#fc0303"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#fc0303"
+          shader: unshaded
+    - type: PointLight
+      color: "#fc0303"
+
+- type: entity
+  name: orange glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsOrangeGingerbread
+  suffix: Gingerbread
+  description: Fruit lamp.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#ff8821"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ff8821"
+          shader: unshaded
+    - type: PointLight
+      color: "#ff8821"
+      
+- type: entity
+  name: yellow glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsYellowGingerbread
+  suffix: Gingerbread
+  description: Kind of like a creature in the night.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#ffe121"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ffe121"
+          shader: unshaded
+    - type: PointLight
+      color: "#ffe121"
+      
+- type: entity
+  name: green glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsGreenGingerbread
+  suffix: Gingerbread
+  description: Elite hacker eye color.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#67ff21"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#67ff21"
+          shader: unshaded
+    - type: PointLight
+      color: "#67ff21"
+      
+- type: entity
+  name: cyan glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsCyanGingerbread
+  description: I'm gonna have a bad time.
+  suffix: Gingerbread
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#21fffb"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#21fffb"
+          shader: unshaded
+    - type: PointLight
+      color: "#21fffb"
+
+- type: entity
+  name: blue glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsBlueGingerbread
+  suffix: Gingerbread
+  description: I have special eyes...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#2176ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#2176ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#2176ff"
+
+- type: entity
+  name: purple glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsPurpleGingerbread
+  suffix: Gingerbread
+  description: I definitely do not have SROS!
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#9421ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#9421ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#9421ff"
+
+- type: entity
+  name: magenta glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsMagentaGingerbread
+  suffix: Gingerbread
+  description: Some people even call this 'purple.'
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#de21ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#de21ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#de21ff"
+
+- type: entity
+  name: sros glowing contacts
+  parent: ClothingContactsBaseGingerbread
+  id: ClothingContactsSROSGingerbread
+  suffix: Gingerbread
+  description: Tryna fall asleep with all these sirens making sounds...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      layers:
+      - state: icon
+        color: "#a621ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/gingerbreadcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#a621ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#a621ff"
+    - type: FlashImmunity
+    - type: EyeProtection
+    - type: VisionCorrection
+
+# shadowkins
+
+- type: entity
+  name: white glowing contacts
+  parent: ClothingEyesBase
+  id: ClothingContactsBaseShadowkin
+  suffix: Shadowkin
+  description: Removed Herobrine.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#FFFFFF"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#FFFFFF"
+          shader: unshaded
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 1
+      netsync: false
+
+- type: entity
+  name: red glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsRedShadowkin
+  suffix: Shadowkin
+  description: W3 M4K3 OUR OWN LUCK
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#fc0303"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#fc0303"
+          shader: unshaded
+    - type: PointLight
+      color: "#fc0303"
+
+- type: entity
+  name: orange glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsOrangeShadowkin
+  suffix: Shadowkin
+  description: Fruit lamp.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#ff8821"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ff8821"
+          shader: unshaded
+    - type: PointLight
+      color: "#ff8821"
+      
+- type: entity
+  name: yellow glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsYellowShadowkin
+  suffix: Shadowkin
+  description: Kind of like a creature in the night.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#ffe121"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ffe121"
+          shader: unshaded
+    - type: PointLight
+      color: "#ffe121"
+      
+- type: entity
+  name: green glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsGreenShadowkin
+  suffix: Shadowkin
+  description: Elite hacker eye color.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#67ff21"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#67ff21"
+          shader: unshaded
+    - type: PointLight
+      color: "#67ff21"
+      
+- type: entity
+  name: cyan glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsCyanShadowkin
+  suffix: Shadowkin
+  description: I'm gonna have a bad time.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#21fffb"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#21fffb"
+          shader: unshaded
+    - type: PointLight
+      color: "#21fffb"
+
+- type: entity
+  name: blue glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsBlueShadowkin
+  suffix: Shadowkin
+  description: I have special eyes...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#2176ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#2176ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#2176ff"
+
+- type: entity
+  name: purple glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsPurpleShadowkin
+  suffix: Shadowkin
+  description: I definitely do not have SROS!
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#9421ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#9421ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#9421ff"
+
+- type: entity
+  name: magenta glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsMagentaShadowkin
+  suffix: Shadowkin
+  description: Some people even call this 'purple.'
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#de21ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#de21ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#de21ff"
+
+- type: entity
+  name: sros glowing contacts
+  parent: ClothingContactsBaseShadowkin
+  id: ClothingContactsSROSShadowkin
+  suffix: Shadowkin
+  description: Tryna fall asleep with all these sirens making sounds...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      layers:
+      - state: icon
+        color: "#a621ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/shadowkincontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#a621ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#a621ff"
+    - type: FlashImmunity
+    - type: EyeProtection
+    - type: VisionCorrection
+
+# chitinids
+
+- type: entity
+  name: white glowing contacts
+  parent: ClothingEyesBase
+  id: ClothingContactsBaseChitinid
+  suffix: Chitinid
+  description: Removed Herobrine.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#FFFFFF"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#FFFFFF"
+          shader: unshaded
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 1
+      netsync: false
+
+- type: entity
+  name: red glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsRedChitinid
+  suffix: Chitinid
+  description: W3 M4K3 OUR OWN LUCK
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#fc0303"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#fc0303"
+          shader: unshaded
+    - type: PointLight
+      color: "#fc0303"
+
+- type: entity
+  name: orange glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsOrangeChitinid
+  suffix: Chitinid
+  description: Fruit lamp.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#ff8821"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ff8821"
+          shader: unshaded
+    - type: PointLight
+      color: "#ff8821"
+      
+- type: entity
+  name: yellow glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsYellowChitinid
+  suffix: Chitinid
+  description: Kind of like a creature in the night.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#ffe121"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#ffe121"
+          shader: unshaded
+    - type: PointLight
+      color: "#ffe121"
+      
+- type: entity
+  name: green glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsGreenChitinid
+  suffix: Chitinid
+  description: Elite hacker eye color.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#67ff21"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#67ff21"
+          shader: unshaded
+    - type: PointLight
+      color: "#67ff21"
+      
+- type: entity
+  name: cyan glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsCyanChitinid
+  suffix: Chitinid
+  description: I'm gonna have a bad time.
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#21fffb"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#21fffb"
+          shader: unshaded
+    - type: PointLight
+      color: "#21fffb"
+
+- type: entity
+  name: blue glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsBlueChitinid
+  suffix: Chitinid
+  description: I have special eyes...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#2176ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#2176ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#2176ff"
+
+- type: entity
+  name: purple glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsPurpleChitinid
+  suffix: Chitinid
+  description: I definitely do not have SROS!
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#9421ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#9421ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#9421ff"
+
+- type: entity
+  name: magenta glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsMagentaChitinid
+  suffix: Chitinid
+  description: Some people even call this 'purple.'
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#de21ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#de21ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#de21ff"
+
+- type: entity
+  name: sros glowing contacts
+  parent: ClothingContactsBaseChitinid
+  id: ClothingContactsSROSChitinid
+  suffix: Chitinid
+  description: Tryna fall asleep with all these sirens making sounds...
+  components:
+    - type: Sprite
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      layers:
+      - state: icon
+        color: "#a621ff"
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Eyes/chitinidcontacts.rsi
+      clothingVisuals:
+        eyes:
+        - state: equipped-EYES
+          color: "#a621ff"
+          shader: unshaded
+    - type: PointLight
+      color: "#a621ff"
+    - type: FlashImmunity
+    - type: EyeProtection
+    - type: VisionCorrection
+
+
+
+# pins
+- type: entity
+  name: white glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinBase
+  description: It's like you're glowing!
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: base
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#ffffff"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: red glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinRed
+  description: girl crush ??? half angle half demon eyes glow red when mad
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: red
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#ff1f1f"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: orange glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinOrange
+  description: Halloween pumpkin core.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: orange
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#ff8000"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: yellow glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinYellow
+  description: Built like a lantern.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: yellow
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#ffe600"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: green glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinGreen
+  description: Pop culture radiation vibes.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: green
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#7bff00"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: cyan glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinCyan
+  description: Real life radiation vibes.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: cyan
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#00fff7"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: blue glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinBlue
+  description: Kind of useless.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: blue
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#004cff"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: purple glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinPurple
+  description: Magical.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: sros
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#b41fff"
+      radius: 2
+      energy: 0.9
+      netsync: false
+
+- type: entity
+  name: magenta glowing pin
+  parent: ClothingNeckBase
+  id: ClothingNeckGlowpinMagenta
+  description: Magenta isn't a real color if you think about it.
+  components:
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      layers:
+      - state: purple
+        shader: unshaded
+    - type: Clothing
+      sprite: _bean/Clothing/Neck/glowpins.rsi
+      equippedPrefix: base
+    - type: PointLight
+      enabled: true
+      color: "#d900ff"
+      radius: 2
+      energy: 0.9
+      netsync: false
+# contacts store
+
+- type: entity
+  parent: [BaseItem, StoreContacts]
+  id: ContactsUnit
+  name: Eye Contacts Transporter
+  description: Only causes cancer sometimes.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Devices/contactsunit.rsi
+    layers:
+    - state: selector
+  - type: Item
+    sprite: _bean/Objects/Devices/contactsunit.rsi
+    heldPrefix: selector
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    balance:
+      GlowdrobeToken: 5
+
+- type: entity
+  id: StoreContacts
+  abstract: true
+  components:
+  - type: Store
+    name: store-contacts-name
+    categories:
+    - BaseContacts
+    - ArachnidContacts
+    - GingerbreadContacts
+    - DionaContacts
+    - ShadowkinContacts
+    - ChitinidContacts
+    currencyWhitelist:
+    - GlowdrobeToken
+
+- type: storeCategory
+  id: BaseContacts
+  name: store-category-contacts1
+
+- type: storeCategory
+  id: ChitinidContacts
+  name: store-category-contacts2
+
+- type: storeCategory
+  id: ShadowkinContacts
+  name: store-category-contacts3
+  
+- type: storeCategory
+  id: DionaContacts
+  name: store-category-contacts4
+
+- type: storeCategory
+  id: GingerbreadContacts
+  name: store-category-contacts5
+
+- type: storeCategory
+  id: ArachnidContacts
+  name: store-category-contacts6
+
+- type: currency
+  id: GlowdrobeToken
+  displayName: store-currency-display-glowdrobe
+  canWithdraw: false
+
+
+- type: listing
+  id: WhiteEyesBase
+  name: contactsbase-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsBase
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: RedEyesBase
+  name: contactsred-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsRed
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: OrangeEyesBase
+  name: contactsorange-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsOrange
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: YellowEyesBase
+  name: contactsyellow-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsYellow
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: GreenEyesBase
+  name: contactsgreen-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsGreen
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: CyanEyesBase
+  name: contactscyan-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsCyan
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+    
+- type: listing
+  id: BlueEyesBase
+  name: contactsblue-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsBlue
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: PurpleEyesBase
+  name: contactspurple-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsPurple
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MagentaEyesBase
+  name: contactsmagenta-name
+  description: contactsbase-desc
+  productEntity: ClothingContactsMagenta
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: SROSEyesBase
+  name: contactssros-name
+  description: contactsbasesros-desc
+  productEntity: ClothingContactsSROS
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - BaseContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# arachnids
+ 
+- type: listing
+  id: WhiteEyesArachnid
+  name: contactsbasear-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsBaseArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: RedEyesArachnid
+  name: contactsredar-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsRedArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: OrangeEyesArachnid
+  name: contactsorangear-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsOrangeArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: YellowEyesArachnid
+  name: contactsyellowar-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsYellowArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: GreenEyesArachnid
+  name: contactsgreenar-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsGreenArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: CyanEyesArachnid
+  name: contactscyanar-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsCyanArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+    
+- type: listing
+  id: BlueEyesArachnid
+  name: contactsbluear-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsBlueArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: PurpleEyesArachnid
+  name: contactspurplear-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsPurpleArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MagentaEyesArachnid
+  name: contactsmagentaar-name
+  description: contactsbase-ar
+  productEntity: ClothingContactsMagentaArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: SROSEyesArachnid
+  name: contactssrosar-name
+  description: contactssros-ar
+  productEntity: ClothingContactsSROSArachnid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ArachnidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# diona
+
+- type: listing
+  id: WhiteEyesDiona
+  name: contactsbasedi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsBaseDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: RedEyesDiona
+  name: contactsreddi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsRedDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: OrangeEyesDiona
+  name: contactsorangedi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsOrangeDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: YellowEyesDiona
+  name: contactsyellowdi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsYellowDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: GreenEyesDiona
+  name: contactsgreendi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsGreenDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: CyanEyesDiona
+  name: contactscyandi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsCyanDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+    
+- type: listing
+  id: BlueEyesDiona
+  name: contactsbluedi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsBlueDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: PurpleEyesDiona
+  name: contactspurpledi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsPurpleDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MagentaEyesDiona
+  name: contactsmagentadi-name
+  description: contactsbase-di
+  productEntity: ClothingContactsMagentaDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: SROSEyesDiona
+  name: contactssrosdi-name
+  description: contactssros-ar
+  productEntity: ClothingContactsSROSDiona
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - DionaContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+# shadowkin
+
+- type: listing
+  id: WhiteEyesShadowkin
+  name: contactsbasesh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsBaseShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: RedEyesShadowkin
+  name: contactsredsh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsRedShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: OrangeEyesShadowkin
+  name: contactsorangesh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsOrangeShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: YellowEyesShadowkin
+  name: contactsyellowsh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsYellowShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: GreenEyesShadowkin
+  name: contactsgreensh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsGreenShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: CyanEyesShadowkin
+  name: contactscyansh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsCyanShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+    
+- type: listing
+  id: BlueEyesShadowkin
+  name: contactsbluesh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsBlueShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: PurpleEyesShadowkin
+  name: contactspurplesh-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsPurpleShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MagentaEyesShadowkin
+  name: contactsmagentash-name
+  description: contactsbase-sh
+  productEntity: ClothingContactsMagentaShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: SROSEyesShadowkin
+  name: contactssrossh-name
+  description: contactssros-sh
+  productEntity: ClothingContactsSROSShadowkin
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ShadowkinContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# chitinid
+
+- type: listing
+  id: WhiteEyesChitinid
+  name: contactsbasech-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsBaseChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: RedEyesChitinid
+  name: contactsredch-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsRedChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: OrangeEyesChitinid
+  name: contactsorangech-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsOrangeChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: YellowEyesChitinid
+  name: contactsyellowch-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsYellowChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: GreenEyesChitinid
+  name: contactsgreench-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsGreenChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: CyanEyesChitinid
+  name: contactscyanch-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsCyanChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+    
+- type: listing
+  id: BlueEyesChitinid
+  name: contactsbluech-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsBlueChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: PurpleEyesChitinid
+  name: contactspurplech-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsPurpleChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MagentaEyesChitinid
+  name: contactsmagentach-name
+  description: contactsbase-ch
+  productEntity: ClothingContactsMagentaChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: SROSEyesChitinid
+  name: contactssrosch-name
+  description: contactssros-ch
+  productEntity: ClothingContactsSROSChitinid
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - ChitinidContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: WhiteEyesGingerbread
+  name: contactsbasegi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsBaseGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: RedEyesGingerbread
+  name: contactsredgi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsRedGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: OrangeEyesGingerbread
+  name: contactsorangegi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsOrangeGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: YellowEyesGingerbread
+  name: contactsyellowgi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsYellowGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: GreenEyesGingerbread
+  name: contactsgreengi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsGreenGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: CyanEyesGingerbread
+  name: contactscyangi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsCyanGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+    
+- type: listing
+  id: BlueEyesGingerbread
+  name: contactsbluegi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsBlueGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: PurpleEyesGingerbread
+  name: contactspurplegi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsPurpleGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: MagentaEyesGingerbread
+  name: contactsmagentagi-name
+  description: contactsbase-gi
+  productEntity: ClothingContactsMagentaGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: SROSEyesGingerbread
+  name: contactssrosgi-name
+  description: contactssros-gi
+  productEntity: ClothingContactsSROSGingerbread
+  cost:
+    GlowdrobeToken: 1
+  categories:
+  - GingerbreadContacts
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

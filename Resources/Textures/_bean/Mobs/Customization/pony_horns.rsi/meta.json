@@ -1,0 +1,27 @@
+{
+  "version":1,
+  "size": {
+    "x":32,
+    "y":32
+  },
+  "copyright":"sprited by calamitycoalesce",
+  "license":"CC-BY-SA-3.0",
+  "states": [
+    {
+      "name":"unicorn_broken",
+      "directions":4
+    },
+    {
+      "name":"unicorn_large",
+      "directions":4
+    },
+    {
+      "name":"unicorn_medium",
+      "directions":4
+    },
+    {
+      "name":"unicorn_small",
+      "directions":4
+    }
+  ]
+}

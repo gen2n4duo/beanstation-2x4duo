@@ -26,7 +26,7 @@
   children:
     - Arachnid
     - Diona
-    - Dwarf
+#    - Dwarf GIVE ME YOUR FUCKING MONEY
     - Human
     - Moth
     - Reptilian
@@ -38,13 +38,14 @@
     - Vox
     - Vulpkanin
     - Rodentia
-    - Yowie
+#    - Yowie WHO CARES
     - IPC
     - Resomi
     - Oni
     - Tajaran
     - Chitinid
     - Plasmaman
+    - Pony
 
 - type: guideEntry
   id: Arachnid

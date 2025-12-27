@@ -1,0 +1,35 @@
+- type: marking
+  id: OniGrubScars
+  bodyPart: Chest
+  markingCategory: Chest
+  canBeDisplaced: true
+  speciesRestriction: [Oni]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/oni_trollthings.rsi
+      state: grubscars
+
+- type: marking
+  id: OniFins
+  bodyPart: Head
+  markingCategory: HeadSide
+  canBeDisplaced: false
+  speciesRestriction: [Oni]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/oni_trollthings.rsi
+      state: fins
+
+- type: marking
+  id: OniFinsTorn
+  bodyPart: Head
+  markingCategory: HeadSide
+  canBeDisplaced: false
+  speciesRestriction: [Oni]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/oni_trollthings.rsi
+      state: finstorn

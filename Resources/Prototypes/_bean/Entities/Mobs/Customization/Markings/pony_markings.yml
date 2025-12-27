@@ -19,6 +19,96 @@
     - sprite: _bean/Mobs/Customization/pony_hair.rsi
       state: laughtermane
 
+- type: marking
+  id: PonyHairKindness
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: kindnessmane
+
+- type: marking
+  id: PonyHairMagic
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: magicmane
+
+- type: marking
+  id: PonyHairCountryBuns
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: countrybunsmane
+
+- type: marking
+  id: PonyHairMessy
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: messymane
+
+- type: marking
+  id: PonyHairGenerosity
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: generositymane
+
+- type: marking
+  id: PonyHairLoyalty
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: loyaltymane
+
+- type: marking
+  id: PonyHairWavy
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: wavymane
+
+- type: marking
+  id: PonyHairTwinCurls
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: twincurlsmane
+      
+- type: marking
+  id: PonyHairHonesty
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_hair.rsi
+      state: honestymane
+
 # tail
 - type: marking
   id: PonyTailTest
@@ -53,3 +143,463 @@
   sprites:
     - sprite: _bean/Mobs/Customization/pony_tails.rsi
       state: laughtertail
+
+- type: marking
+  id: PonyTailMagic
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: magictail
+
+- type: marking
+  id: PonyTailKindness
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: kindnesstail
+
+- type: marking
+  id: PonyTailCountryBuns
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: countrybunstail
+
+- type: marking
+  id: PonyTailMessy
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: messytail
+
+- type: marking
+  id: PonyTailGenerosity
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: generositytail
+
+- type: marking
+  id: PonyTailLoyalty
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: loyaltytail
+
+- type: marking
+  id: PonyTailWavy
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: wavytail
+
+- type: marking
+  id: PonyTailTwinCurls
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: twincurlstail
+
+- type: marking
+  id: PonyTailHonesty
+  bodyPart: Tail
+  markingCategory: Tail
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_tails.rsi
+      state: honestytail
+
+# overlays???
+# placeholder until all the base set manes/tails are done
+#- type: marking
+#  id: PonyHairLaughterColor2
+#  bodyPart: Hair
+#  markingCategory: HeadSide
+#  canBeDisplaced: false
+#  speciesRestriction: [Pony]
+#  sprites:
+#    - sprite: _bean/Mobs/Customization/pony_coloralts.rsi
+#      state: laughtermane
+
+# misc
+
+- type: marking
+  id: PonyBareHooves
+  bodyPart: RHand
+  markingCategory: Overlay
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: barehooves
+
+- type: marking
+  id: PonyFluffyEars
+  bodyPart: Head
+  markingCategory: Head
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: fluffyears
+
+- type: marking
+  id: PonyFaceScar1
+  bodyPart: Head
+  markingCategory: Face
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: facescar1
+
+- type: marking
+  id: PonyFaceScar2
+  bodyPart: Head
+  markingCategory: Face
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: facescar2
+
+- type: marking
+  id: PonyFreckles
+  bodyPart: Head
+  markingCategory: Face
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: freckles
+
+- type: marking
+  id: PonyBlush
+  bodyPart: Head
+  markingCategory: Face
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: blush
+
+- type: marking
+  id: PonyCutieMarkPixel1
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel1
+
+- type: marking
+  id: PonyCutieMarkPixel2
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel2
+
+- type: marking
+  id: PonyCutieMarkPixel3
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel3
+
+- type: marking
+  id: PonyCutieMarkPixel4
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel4
+
+- type: marking
+  id: PonyCutieMarkPixel5
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel5
+
+- type: marking
+  id: PonyCutieMarkPixel6
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel6
+
+- type: marking
+  id: PonyCutieMarkPixel7
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel7
+
+- type: marking
+  id: PonyCutieMarkPixel8
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel8
+
+- type: marking
+  id: PonyCutieMarkPixel9
+  bodyPart: RLeg
+  markingCategory: RightLeg
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackColor: "#666666"
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_misc.rsi
+      state: cutiemarkpixel9
+# horns
+- type: marking
+  id: PonyUnicornSmall
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_horns.rsi
+      state: unicorn_small
+
+- type: marking
+  id: PonyUnicornMedium
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_horns.rsi
+      state: unicorn_medium
+
+- type: marking
+  id: PonyUnicornLarge
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_horns.rsi
+      state: unicorn_large
+
+- type: marking
+  id: PonyUnicornBroken
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_horns.rsi
+      state: unicorn_broken
+# wings
+- type: marking
+  id: PonyPegasiSmall
+  bodyPart: Tail
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_wings.rsi
+      state: pegasi_small
+
+- type: marking
+  id: PonyPegasiMedium
+  bodyPart: Tail
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_wings.rsi
+      state: pegasi_med
+
+- type: marking
+  id: PonyPegasiLarge
+  bodyPart: Tail
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_wings.rsi
+      state: pegasi_large
+
+- type: marking
+  id: PonyPegasiRobot
+  bodyPart: Tail
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Pony]
+  followSkinColor: true
+  sprites:
+    - sprite: _bean/Mobs/Customization/pony_wings.rsi
+      state: pegasi_robot

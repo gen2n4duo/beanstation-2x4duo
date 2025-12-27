@@ -372,3 +372,20 @@
             Poison: 5
             Slash: 3
             Asphyxiation: 3
+# chronos!!!!!!!
+- type: reagent
+  id: Chronos
+  name: reagent-name-chronos
+  group: Narcotics
+  desc: reagent-desc-chronos
+  flavor: bitter
+  color: "#00d9ff"
+  physicalDesc: reagent-physical-desc-thinwatery
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1

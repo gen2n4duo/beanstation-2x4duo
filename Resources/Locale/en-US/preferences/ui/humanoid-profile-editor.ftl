@@ -76,7 +76,7 @@ humanoid-profile-editor-job-priority-high-button = High
 humanoid-profile-editor-job-priority-medium-button = Medium
 humanoid-profile-editor-job-priority-low-button = Low
 humanoid-profile-editor-job-priority-never-button = Never
-humanoid-profile-editor-naming-rules-warning = Bait used to be believable.
+humanoid-profile-editor-naming-rules-warning = Leeeeet's go gambling! Aw dang it. Aw dang i-
 humanoid-profile-editor-markings-tab = Markings
 humanoid-profile-editor-flavortext-tab = Description
 

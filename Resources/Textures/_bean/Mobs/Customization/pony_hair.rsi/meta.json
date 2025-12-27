@@ -4,7 +4,7 @@
     "x":32,
     "y":32
   },
-  "copyright":"Copied by CalamityCoalesce",
+  "copyright":"sprited by calamitycoalesce",
   "license":"CC-BY-SA-3.0",
   "states": [
     {
@@ -13,6 +13,42 @@
     },
     {
       "name":"laughtermane",
+      "directions":4
+    },
+    {
+      "name":"kindnessmane",
+      "directions":4
+    },
+    {
+      "name":"magicmane",
+      "directions":4
+    },
+    {
+      "name":"countrybunsmane",
+      "directions":4
+    },
+    {
+      "name":"messymane",
+      "directions":4
+    },
+    {
+      "name":"wavymane",
+      "directions":4
+    },
+    {
+      "name":"generositymane",
+      "directions":4
+    },
+    {
+      "name":"loyaltymane",
+      "directions":4
+    },
+    {
+      "name":"honestymane",
+      "directions":4
+    },
+    {
+      "name":"twincurlsmane",
       "directions":4
     }
   ]

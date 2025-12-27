@@ -2,7 +2,7 @@
   save: false
   name: Urist McHooves
   parent: [ BaseMobSpeciesOrganic ]
-  id: BaseMobPony
+  id: BaseMobPony # my ass is NOT adding a custom subspecies mechanic for these guys. im sorry. you're on your own if you want to port this.
   abstract: true
   components:
   - type: HumanoidAppearance
@@ -36,29 +36,17 @@
     spawned:
     - id: FoodMeat
       amount: 5
-  - type: Tag
-    tags:
-    - Pony
-  - type: MovementSpeedModifier
-    weightlessAcceleration: 3 # Goobstation value
-    weightlessFriction: 1
-    baseWeightlessModifier: 1
-    weightlessModifier: 0.8 # up from 0.7 base
-  - type: Sprite # sprite again because we want different layer ordering
+  - type: Sprite # i HATE everything in the UNIVERSE . 
     noRot: true
     drawdepth: Mobs
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Groin" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
-      - map: [ "enum.HumanoidVisualLayers.Snout" ]
-      - map: [ "enum.HumanoidVisualLayers.Eyes" ]
       - map: [ "enum.HumanoidVisualLayers.RArm" ]
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.Underwear" ]
-      - map: [ "enum.HumanoidVisualLayers.Undershirt" ]
       - map: [ "jumpsuit" ]
       - map: [ "enum.HumanoidVisualLayers.LHand" ]
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
@@ -72,28 +60,34 @@
       - map: [ "gloves" ]
       - map: [ "shoes" ]
       - map: [ "ears" ]
-      - map: [ "eyes" ]
+      - map: [ "outerClothing" ]
       - map: [ "belt" ]
       - map: [ "id" ]
-      - map: [ "outerClothing" ]
       - map: [ "back" ]
-      - map: [ "enum.HumanoidVisualLayers.Tail" ]
       - map: [ "neck" ]
-      - map: [ "enum.HumanoidVisualLayers.Face" ]
+      - map: [ "enum.HumanoidVisualLayers.Tail" ] #GOOBSTATION ADD WINGS CHALLENGE OR I AM GOING TO ADD THEM MYSELF
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
-      - map: [ "maskalt" ]
-      - map: [ "mask" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-      - map: [ "head" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
-      - map: [ "hair" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+      - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+      - map: [ "eyes" ]
+      - map: [ "mask" ]
+      - map: [ "head" ]
       - map: [ "pocket1" ]
       - map: [ "pocket2" ]
-      - map: [ "clownedon" ] # Dynamically generated
-        sprite: "Effects/creampie.rsi"
-        state: "creampie_moth"
+      - map: [ "clownedon" ]
+        sprite: "_bean/Effects/creampie.rsi"
+        state: "creampie_pony" # you laugh you go to hell
         visible: false
+  - type: Tag
+    tags:
+    - Pony
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 3 # Goobstation value
+    weightlessFriction: 1
+    baseWeightlessModifier: 1
+    weightlessModifier: 0.8 # up from 0.7 base # gonna be so for real i only kept this because im scared of fucking with it and i guess the weightlessness smakes sense for pegasi
   - type: Inventory
     speciesId: pony
     femaleDisplacements:

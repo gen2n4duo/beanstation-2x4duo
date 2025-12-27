@@ -125,7 +125,6 @@
   - Musician
   - Reporter
   - Visitor
-  - Zookeeper
 
 - type: department
   id: CentralCommand

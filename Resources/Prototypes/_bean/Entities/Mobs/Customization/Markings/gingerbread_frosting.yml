@@ -1,0 +1,119 @@
+- type: marking
+  id: GingerbreadHorns
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: horns
+
+- type: marking
+  id: GingerbreadBrokenHornR
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: brokenhornr
+
+- type: marking
+  id: GingerbreadBrokenHornL
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: brokenhornl
+
+- type: marking
+  id: GingerbreadLashes
+  bodyPart: HeadSide
+  markingCategory: Face
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: lashes
+
+- type: marking
+  id: GingerbreadRibbons
+  bodyPart: Chest
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: ribboned
+
+- type: marking
+  id: GingerbreadRibcage
+  bodyPart: Chest
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: ribcage
+
+- type: marking
+  id: GingerbreadSplatter
+  bodyPart: Chest
+  markingCategory: Chest
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: splatter
+
+- type: marking
+  id: GingerbreadCheeks
+  bodyPart: HeadSide
+  markingCategory: Face
+  canBeDisplaced: false
+  speciesRestriction: [Gingerbread]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffe0cf"
+  sprites:
+    - sprite: _bean/Mobs/Customization/gingerbread_frosting.rsi
+      state: rosycheeks

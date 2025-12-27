@@ -1,4 +1,4 @@
-# i'm not even a brony i did this for one of my friends. i love my friends. friendship is great
+# i'm not even a brony i did this for one of my friends. i love my friends. friendship is great. you could even say friendship is magic
 
 - type: species
   id: Pony
@@ -31,8 +31,8 @@
     Snout: MobHumanoidAnyMarking
     Underwear: MobHumanoidAnyMarking
     Undershirt: MobHumanoidAnyMarking
-    Chest: MobPonyChest
     Groin: MobPonyGroin
+    Chest: MobPonyChest
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
@@ -78,7 +78,7 @@
       points: 8
       required: false
     Chest:
-      points: 8
+      points: 2
       required: false
     Underwear:
       points: 1
@@ -87,7 +87,7 @@
       points: 1
       required: false
     RightLeg:
-      points: 2
+      points: 9
       required: false
     RightFoot:
       points: 2

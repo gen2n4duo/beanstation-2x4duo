@@ -63,7 +63,7 @@
   components:
   - type: Sprite
     sprite: _bean/Objects/Consumable/Food/jumboshrimp.rsi
-    state: sliceplaceholder
+    state: rawshrimppiece
   - type: SolutionContainerManager
     solutions:
       food:
@@ -85,7 +85,7 @@
   components:
   - type: Sprite
     sprite: _bean/Objects/Consumable/Food/jumboshrimp.rsi
-    state: sliceplaceholder
+    state: cookedshrimppiece
   - type: SolutionContainerManager
     solutions:
       food:

@@ -6,12 +6,38 @@
   id: RaceToken
   displayName: store-currency-display-ponytraits
   canWithdraw: false
-  
+
+- type: listing
+  id: PonyTraitSpaceproof
+  name: pegasustrait-name
+  description: pegasustrait-desc
+  productEntity: PGTraitGiver
+  cost:
+    RaceToken: 1
+  categories:
+  - PonyRacialTraits
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+ 
 - type: listing
   id: PonyTraitTeleport
   name: unicorntrait-name
   description: unicorntrait-desc
-  productAction: ActionTeleportWizard
+  productEntity: UNTraitGiver
+  cost:
+    RaceToken: 1
+  categories:
+  - PonyRacialTraits
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: PonyTraitCQC
+  name: earthponytrait-name
+  description: earthponytrait-desc
+  productEntity: EPTraitGiver
   cost:
     RaceToken: 1
   categories:
@@ -34,17 +60,16 @@
 - type: entity
   parent: [BaseItem, StorePonyTraits]
   id: BasePonySelector
-  name: pony trait selector
-  description: The world's laziest excuse to not learn C#.
-  suffix: Empty
+  name: P.T.S (READ DESC)
+  description: The lamest excuse to not learn C#. THIS ITEM IS DESTROYED ON DROP. YOU CANNOT REFUND YOUR CHOICE. HANDLE WITH CAUTION
   components:
   - type: Sprite
-    sprite: Objects/Devices/communication.rsi
+    sprite: _bean/Objects/Devices/traitselector.rsi
     layers:
-    - state: radio
+    - state: selector
   - type: Item
-    sprite: Objects/Devices/communication.rsi
-    heldPrefix: radio
+    sprite: _bean/Objects/Devices/traitselector.rsi
+    heldPrefix: selector
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
@@ -53,8 +78,103 @@
     key: enum.StoreUiKey.Key
   - type: Store
     balance:
-    ownerOnly: true # NO CHEATING
       RaceToken: 1
+  - type: DeleteOnDropAttempt
 
+- type: entity
+  parent: [BaseItem]
+  id: EPTraitGiver
+  name: Earth Pony Trait Giver
+  description: Given upon use. Destroyed on drop.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Devices/traitselector.rsi
+    state: cqcgiver
+  - type: GrantCqc
+  - type: DeleteOnDropAttempt
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: WeakSpaceProofImplant
+  name: weak space proofing implant
+  description: This implant allows the user to survive in space; but you must still breathe.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WeakSpaceProofImplant
+
+- type: entity
+  parent: [BaseItem, BaseImplantOnlyImplanterCentcomm]
+  id: PGTraitGiver
+  name: Pegasus Trait Giver
+  description: You must use this item like an implanter for it to work.
+  components:
+  - type: Sprite
+    sprite: _bean/Objects/Devices/traitselector.rsi
+    state: implanter0
+  - type: Implanter
+    implant: WeakSpaceProofImplant
+  - type: DeleteOnDropAttempt
+
+- type: entity
+  parent: [BaseItem, BaseImplantOnlyImplanterCentcomm]
+  id: UNTraitGiver
+  name: Unicorn Trait Giver
+  description: You must use this item like an implanter for it to work.
+  components:
+  - type: Item
+    sprite: _bean/Objects/Devices/traitselector.rsi
+  - type: Sprite
+    sprite: _bean/Objects/Devices/traitselector.rsi
+    state: implanter1
+    layers:
+      - state: implanter2
+        map: [ "implantFull" ]
+        visible: true
+      - state: implanter3
+        map: [ "implantOnly" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ImplanterVisuals.Full:
+        implantFull:
+          True: {visible: true}
+          False: {visible: false}
+      enum.ImplanterImplantOnlyVisuals.ImplantOnly:
+        implantOnly:
+          True: {state: broken}
+          False: {state: implanter2}
+  - type: Implanter
+    implant: TeleportPonyImplant
+  - type: DeleteOnDropAttempt
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: TeleportPonyImplant
+  name: teleport implant
+  description: You must use this item like an implanter for it to work.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionTeleportPony
+
+- type: entity
+  parent: [ BaseAction, ActionTeleportWizard ]
+  id: ActionTeleportPony
+  name: Teleport
+  description: This spell teleports you to an area of your selection.
+  components:
+  - type: Magic
+    requiresSpeech: false
+    requiresClothes: false
+  - type: Action
+    icon:
+      sprite: _bean/Interface/actions.rsi
+      state: ponyteleport
+# going here because i genuinely cant be bothered to make another yml in some other fuckoff directory for it. if i add more i will
 - type: Tag
   id: Pony
+
+- type: guideEntry
+  id: Pony
+  name: species-name-pony
+  text: "/ServerInfo/Guidebook/Mobs/Pony.xml"
+

@@ -1,0 +1,64 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachinePonyOutfits
+  name: Pony Style-z
+  description: A vending machine containing horse fits.
+  components:
+  - type: VendingMachine
+    pack: PonyVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: PonyvendAds
+  - type: SpeakOnUIClosed
+    pack: PonyvendGoodbyes
+  - type: Speech
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3 # reduced energy since the color is pure white
+    color: "#FFFFFF"
+  - type: Sprite
+    sprite: _bean\Structures\VendingMachines\ponyvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: vendingMachineInventory
+  id: PonyVendInventory
+  startingInventory:
+    ClothingUniformRandomShortsPony: 15
+    ClothingUniformRandomShirtPony: 15
+    ClothingUniformRandomStandardPony: 15
+    ClothingUniformRandomArmlessPony: 15
+    ClothingBackpackSaddlebag: 15 
+    ClothingBackpackSaddlebagDouble: 15
+    ClothingShoesColorPurplePony: 15
+    ClothingShoesColorYellowPony: 15
+    ClothingShoesColorRedPony: 15
+    ClothingShoesColorOrangePony: 15
+    ClothingShoesColorGreenPony: 15
+    ClothingShoesColorBrownPony: 15
+    ClothingShoesColorBluePony: 15
+    ClothingShoesColorWhitePony: 15
+    ClothingShoesColorBlackPony: 15
+    ClothingHeadsetAltPony: 15
+    ClothingHeadsetPony: 15
+    
+    
+- type: localizedDataset
+  id: PonyvendAds
+  values:
+    prefix: advertisement-ponyvend-
+    count: 4
+
+- type: localizedDataset
+  id: PonyvendGoodbyes
+  values:
+    prefix: thankyou-ponyvend-
+    count: 3

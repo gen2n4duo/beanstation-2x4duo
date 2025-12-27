@@ -1,6 +1,9 @@
 reagent-name-ichorubizine = ichorubizine
 reagent-desc-ichorubizine = Cures and violently purges the body of all SROS cells, leaving the body weak and frail.
 
+reagent-name-chronos = chronos
+reagent-desc-chronos = uninplemented until i can figure out how to depict it. unobtainable and uncraftable. does nothing rn
+
 reagent-name-sros = synthetic rapid omnisarcoma
 reagent-desc-sros = A liquid comprised of chemically altered cancer cells. Gives a sort of pseudo-immortality, at the cost of severe, lifelong mental degradation and physical stagnation.
 

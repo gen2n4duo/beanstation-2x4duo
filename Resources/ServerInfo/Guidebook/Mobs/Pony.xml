@@ -1,0 +1,28 @@
+<Document>
+  # Ponies
+
+  <Box>
+    <GuideEntityEmbed Entity="MobPony" Caption=""/>
+  </Box>
+  
+  Ponies hail from the distant planet of Equestria; a world of magic with diverse life. There are known to be 4 major variants with their own minor differences.
+  Though, across the entire race, Ponies are generally more resistant to [color=#ec3a3a]Blunt[/color] damage while being weaker to [color=#347515]Poison[/color] damage.
+  However, due to their hooves, they cannot use most guns and instead must rely on melee or hand-to-hand combat. (hoof-to-hoof combat?)
+  
+  [color=#a663f2]Unicorns[/color] are magically imbued and capable of teleportation.
+  [color=#95e685]Earth Ponies[/color] while lacking wings or a horn, harbor powerful physical strength.
+  [color=#63bdeb]Pegasi[/color] have thicker coats and adaptations to extreme pressure environments.
+  [color=#ffb3fb]Alicorns[/color] have all of the above- but are exceedingly rare.
+  
+  ## Sorry, I'm vegetarian!
+  <Box>
+    <GuideEntityEmbed Entity="FoodApple" Caption=""/>
+  </Box>
+  
+  Ponies are primary fruit/vegetable/grain eaters and cannot eat meat or meat products.
+
+  ## Everypony wants to rule the world...
+  
+  They have their own language, formally called Equestrian due to it's global usage on their homeworld. It is very rare to find this language in non-pony societies.
+  
+</Document>

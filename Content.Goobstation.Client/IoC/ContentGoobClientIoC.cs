@@ -9,7 +9,6 @@
 
 using Content.Goobstation.Client.JoinQueue;
 using Content.Goobstation.Client.MisandryBox;
-using Content.Goobstation.Client.MisandryBox.Spider;
 using Content.Goobstation.Client.Redial;
 using Content.Goobstation.Client.ServerCurrency;
 using Content.Goobstation.Client.Voice;
@@ -30,7 +29,6 @@ internal static class ContentGoobClientIoC
         collection.Register<IVoiceChatManager, VoiceChatClientManager>();
         collection.Register<JoinQueueManager>();
         collection.Register<IFullScreenImageJumpscare, ClientFullScreenImageJumpscare>();
-        collection.Register<ISpiderManager, ClientSpiderManager>();
         collection.Register<ICommonCurrencyManager, ClientCurrencyManager>();
     }
 }

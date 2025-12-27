@@ -10,6 +10,12 @@
     sprite: _bean/Objects/Misc/watertank.rsi
   - type: Clothing
     sprite: _bean/Objects/Misc/watertank.rsi
+    
+- type: entity
+  parent: GasTankRoundBase
+  id: EmptyGasTankVend
+  name: refillable gas tank
+  description: An empty gas tank. It can hold 5 L of gas. Ask Engineering to fill these for you.
 
 # whoever designed this system, if you laugh you go to hell
 
@@ -31,3 +37,5 @@
         - 0 # tritium
         - 2.051379050 # water vapor
       temperature: 293.15
+
+# add extended and emergency variants when hylotls are implemented

@@ -4,7 +4,7 @@
     "x":32,
     "y":32
   },
-  "copyright":"Copied by CalamityCoalesce",
+  "copyright":"sprited by calamitycoalesce",
   "license":"CC-BY-SA-3.0",
   "states": [
     {
@@ -13,6 +13,42 @@
     },
     {
       "name":"laughtertail",
+      "directions":4
+    },
+    {
+      "name":"kindnesstail",
+      "directions":4
+    },
+    {
+      "name":"magictail",
+      "directions":4
+    },
+    {
+      "name":"countrybunstail",
+      "directions":4
+    },
+    {
+      "name":"messytail",
+      "directions":4
+    },
+    {
+      "name":"wavytail",
+      "directions":4
+    },
+    {
+      "name":"generositytail",
+      "directions":4
+    },
+    {
+      "name":"loyaltytail",
+      "directions":4
+    },
+    {
+      "name":"honestytail",
+      "directions":4
+    },
+    {
+      "name":"twincurlstail",
       "directions":4
     }
   ]

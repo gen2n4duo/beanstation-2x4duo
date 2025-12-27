@@ -1,0 +1,53 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineBreathGear
+  name: Gas-Vendomatic
+  description: A vending machine containing gas.
+  components:
+  - type: VendingMachine
+    pack: GasVendoInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: GasVendoAds
+  - type: SpeakOnUIClosed
+    pack: GasVendoGoodbyes
+  - type: Speech
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3 # reduced energy since the color is pure white
+    color: "#FFFFFF"
+  - type: Sprite
+    sprite: _bean\Structures\VendingMachines\gasvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: vendingMachineInventory
+  id: GasVendoInventory
+  startingInventory:
+    ClothingMaskGas: 8
+    ClothingMaskBreath: 8
+    OxygenTankFilled: 5
+    NitrogenTankFilled: 5
+    WaterVaporTankFilled: 5
+    PlasmaTankFilled: 5
+    EmptyGasTankVend: 15
+
+- type: localizedDataset
+  id: GasVendoAds
+  values:
+    prefix: advertisement-gasvend-
+    count: 4
+
+- type: localizedDataset
+  id: GasVendoGoodbyes
+  values:
+    prefix: thankyou-gasvend-
+    count: 3
